@@ -37,7 +37,7 @@ export function HeroSection() {
               <div className="flex items-start gap-4">
                 <span className="text-2xl">&quot;</span>
                 <div>
-                  <p className="mb-2">Jenny&apos;s Exceptional product design ensure our website&apos;s success.</p>
+                  <p className="mb-2">Daniel&apos;s Exceptional product design ensure our website&apos;s success.</p>
                   <p className="font-medium">Highly Recommended</p>
                 </div>
               </div>
@@ -74,7 +74,8 @@ export function HeroSection() {
               transition={{ duration: 0.8 }}
             >
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZWyPrFgNAqfELZYL1LGlyRvjigJz3A.png"
+                src="/images/portpic.jpeg"
+                // https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZWyPrFgNAqfELZYL1LGlyRvjigJz3A.png"
                 alt="Jenny - Product Designer"
                 fill
                 className="object-cover object-center"
