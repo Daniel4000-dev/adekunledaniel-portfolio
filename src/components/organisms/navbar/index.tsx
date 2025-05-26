@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Logo } from "@/components/atoms/logo"
+// import { Logo } from "@/components/atoms/logo"
 // import { NavLinks } from "@/components/molecules/navLinks"
 // import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -31,7 +31,7 @@ export function Navbar() {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <div className="container flex items-center justify-between">
-        <Logo />
+        {/* <Logo /> */}
 
         {/* Desktop Navigation */}
         {/* <NavLinks className="hidden md:block" /> */}

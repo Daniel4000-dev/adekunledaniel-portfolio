@@ -1,7 +1,7 @@
 "use client"
 
 import { Logo } from "@/components/atoms/logo"
-import { NavLinks } from "@/components/molecules/navLinks"
+// import { NavLinks } from "@/components/molecules/navLinks"
 import { SocialIcons } from "@/components/atoms/icon/socialIcons"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -26,11 +26,11 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            Lets Connect there
+            Let&apos;s Build Something Amazing
           </motion.h2>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button className="bg-brand-orange hover:bg-brand-orange/90">
-              Hire me <ArrowRight className="ml-2 h-4 w-4" />
+              Start a Project <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>
         </motion.div>
@@ -52,8 +52,9 @@ export function Footer() {
           >
             <Logo />
             <p className="mt-4 text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+              Full-stack developer specializing in modern web solutions. Combining clean code with intuitive design 
+              to build scalable applications that solve real-world problems. Let&apos;s transform your ideas into 
+              digital reality.
             </p>
             <SocialIcons className="mt-6" />
           </motion.div>
@@ -65,7 +66,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="mb-6 text-xl font-bold text-brand-orange">Navigation</h3>
-            <NavLinks vertical linkClassName="text-gray-400 hover:text-brand-orange" />
+            {/* <NavLinks vertical linkClassName="text-gray-400 hover:text-brand-orange" /> */}
           </motion.div>
 
           <motion.div
@@ -77,13 +78,13 @@ export function Footer() {
             <h3 className="mb-6 text-xl font-bold text-brand-orange">Contact</h3>
             <ul className="space-y-4 text-gray-400">
               <motion.li whileHover={{ x: 5, color: "#FF7A30" }} transition={{ duration: 0.2 }}>
-                +91 7738443636
+                +2348163752061
               </motion.li>
               <motion.li whileHover={{ x: 5, color: "#FF7A30" }} transition={{ duration: 0.2 }}>
-                Jaycrea36@gmail.com
+                dadekunle31@gmail.com
               </motion.li>
               <motion.li whileHover={{ x: 5, color: "#FF7A30" }} transition={{ duration: 0.2 }}>
-                Portfolio-jcrea.com
+              https://sites.google.com/view/danieladekunle/home
               </motion.li>
             </ul>
 
@@ -116,7 +117,7 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm text-gray-400">Copyright© 2023 Jayesh. All Rights Reserved.</p>
+          <p className="text-sm text-gray-400">Copyright© 2025 Daniel. All Rights Reserved.</p>
           <div className="text-sm text-gray-400">
             <motion.span whileHover={{ color: "#FF7A30" }}>User Terms & Conditions | Privacy Policy</motion.span>
           </div>

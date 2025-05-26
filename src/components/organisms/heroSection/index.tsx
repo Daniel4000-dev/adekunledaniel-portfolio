@@ -23,8 +23,8 @@ export function HeroSection() {
             </motion.div>
 
             <AnimatedText
-              text="I'm Jenny, Product Designer"
-              highlightedWord="Jenny"
+              text="I'm Daniel, Software Engineer"
+              highlightedWord="Daniel"
               className="mb-6 text-5xl font-bold md:text-6xl"
             />
 
@@ -107,7 +107,7 @@ export function HeroSection() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.3 }}
                 >
-                  10 Years
+                  3 Years
                 </motion.p>
                 <motion.p
                   className="text-sm"

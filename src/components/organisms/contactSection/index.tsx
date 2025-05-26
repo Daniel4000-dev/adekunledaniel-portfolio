@@ -117,7 +117,7 @@ export function ContactSection() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>Certified Product Designer</span>
+              <span>Certified Developer</span>
             </motion.div>
           </motion.div>
         </motion.div>

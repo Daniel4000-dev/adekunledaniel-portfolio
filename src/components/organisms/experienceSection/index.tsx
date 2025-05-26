@@ -23,31 +23,30 @@ export function ExperienceSection() {
 
         <div className="space-y-16">
           <ExperienceItem
-            company="Cognizant"
-            location="Mumbai"
-            period="Sep 2016- July 2020"
-            position="Experience Designer"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales"
+            company="Tech Innovators Ltd"
+            location="Remote"
+            period="Jun 2021 - Present"
+            position="Full-Stack Developer"
+            description="Developed scalable web applications using React & Node.js. Led migration to microservices architecture reducing API response time by 40%. Implemented CI/CD pipelines using Docker and Jenkins."
             isOrange={true}
             index={0}
           />
 
           <ExperienceItem
-            company="Sugee Pvt limited"
-            location="Mumbai"
-            period="Sep 2020- July 2023"
-            position="UI/UX Designer"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales"
-            isOrange={false}
-            index={1}
+           company="FinTech Solutions Inc"
+           location="New York, NY"
+           period="Jan 2019 - May 2021"
+           position="Backend Engineer"
+           description="Built RESTful APIs handling 50k+ daily transactions using Python/Django. Optimized database queries reducing latency by 35%. Integrated AWS services (S3, Lambda) for file processing workflows."
+           index={1}
           />
 
           <ExperienceItem
-            company="Cinetstox"
-            location="Mumbai"
-            period="Sep 2023"
-            position="Lead UX Designer"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales"
+            company="Code Masters Academy"
+            location="London, UK"
+            period="Aug 2017 - Dec 2018"
+            position="Junior Developer"
+            description="Contributed to educational platform development with Vue.js and Firebase. Implemented real-time chat features using WebSockets. Conducted code reviews and mentored internship students."
             isOrange={true}
             index={2}
           />
