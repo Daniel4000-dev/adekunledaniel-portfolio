@@ -500,7 +500,7 @@ export default function ContactPage() {
           <SectionHeading
             title="Contact Me"
             subtitle="Get In Touch"
-            highlightedWord="Contact"
+            highlightedWord="Contact Me"
             align="center"
             className="mb-12"
           />
