@@ -144,42 +144,42 @@ function ProjectsContent() {
   const [activeFilter, setActiveFilter] = useState("All")
 
   const projects = [
-    {
-      id: 1,
-      title: "KOYI - Online Learning Platform",
-      description:
-        "Comprehensive online learning platform enabling users to access courses, hire professionals, and engage with instructors through messaging system.",
-      image: "/placeholder.svg?height=300&width=500&text=KOYI+Learning+Platform",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-      category: "Web Application",
-      status: "Current Project",
-      period: "October 2024 - Present",
-      features: [
-        "Course management system",
-        "Real-time messaging",
-        "Professional profiles",
-        "Responsive design",
-        "User authentication",
-      ],
-    },
-    {
-      id: 2,
-      title: "LukeHealth - Medical App",
-      description:
-        "Medical application for patient profiles, appointment booking, and health tracking with secure data storage.",
-      image: "/placeholder.svg?height=300&width=500&text=LukeHealth+Medical+App",
-      technologies: ["React Native", "Firebase", "TypeScript", "Healthcare APIs"],
-      category: "Mobile Application",
-      status: "Current Project",
-      period: "November 2024 - Present",
-      features: [
-        "Patient profile management",
-        "Appointment scheduling",
-        "Health tracking",
-        "Doctor monitoring system",
-        "Secure data storage",
-      ],
-    },
+    // {
+    //   id: 1,
+    //   title: "KOYI - Online Learning Platform",
+    //   description:
+    //     "Comprehensive online learning platform enabling users to access courses, hire professionals, and engage with instructors through messaging system.",
+    //   image: "/placeholder.svg?height=300&width=500&text=KOYI+Learning+Platform",
+    //   technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    //   category: "Web Application",
+    //   status: "Current Project",
+    //   period: "October 2024 - Present",
+    //   features: [
+    //     "Course management system",
+    //     "Real-time messaging",
+    //     "Professional profiles",
+    //     "Responsive design",
+    //     "User authentication",
+    //   ],
+    // },
+    // {
+    //   id: 2,
+    //   title: "LukeHealth - Medical App",
+    //   description:
+    //     "Medical application for patient profiles, appointment booking, and health tracking with secure data storage.",
+    //   image: "/placeholder.svg?height=300&width=500&text=LukeHealth+Medical+App",
+    //   technologies: ["React Native", "Firebase", "TypeScript", "Healthcare APIs"],
+    //   category: "Mobile Application",
+    //   status: "Current Project",
+    //   period: "November 2024 - Present",
+    //   features: [
+    //     "Patient profile management",
+    //     "Appointment scheduling",
+    //     "Health tracking",
+    //     "Doctor monitoring system",
+    //     "Secure data storage",
+    //   ],
+    // },
     {
       id: 3,
       title: "Megawins - Gaming Platform",
@@ -216,24 +216,24 @@ function ProjectsContent() {
         "Mobile responsive design",
       ],
     },
-    {
-      id: 5,
-      title: "MarcheSolution - School Management",
-      description:
-        "Large-scale school management platform with student progress tracking, ID card generation, and online exam creation.",
-      image: "/placeholder.svg?height=300&width=500&text=MarcheSolution+School+Platform",
-      technologies: ["React", "JavaScript", "APIs", "Educational Tools"],
-      category: "Education",
-      status: "Completed",
-      period: "September 2023 - December 2023",
-      features: [
-        "Student progress tracking",
-        "ID card generation",
-        "Certificate creation",
-        "Online exam system",
-        "Analytics dashboard",
-      ],
-    },
+    // {
+    //   id: 5,
+    //   title: "MarcheSolution - School Management",
+    //   description:
+    //     "Large-scale school management platform with student progress tracking, ID card generation, and online exam creation.",
+    //   image: "/placeholder.svg?height=300&width=500&text=MarcheSolution+School+Platform",
+    //   technologies: ["React", "JavaScript", "APIs", "Educational Tools"],
+    //   category: "Education",
+    //   status: "Completed",
+    //   period: "September 2023 - December 2023",
+    //   features: [
+    //     "Student progress tracking",
+    //     "ID card generation",
+    //     "Certificate creation",
+    //     "Online exam system",
+    //     "Analytics dashboard",
+    //   ],
+    // },
     {
       id: 6,
       title: "OneWallet MFB - Digital Payment",
@@ -252,41 +252,41 @@ function ProjectsContent() {
         "Community features",
       ],
     },
-    {
-      id: 7,
-      title: "EEC - Estate Website",
-      description:
-        "E-powered estate website with endpoint integration and optimized performance for real estate management.",
-      image: "/placeholder.svg?height=300&width=500&text=EEC+Estate+Website",
-      technologies: ["React", "JavaScript", "APIs", "Real Estate"],
-      category: "Real Estate",
-      status: "Completed",
-      period: "February 2024 - June 2024",
-      features: [
-        "Property listings",
-        "API integrations",
-        "Performance optimization",
-        "Responsive design",
-        "User interface components",
-      ],
-    },
-    {
-      id: 8,
-      title: "MOA Delivery - Food Delivery",
-      description: "Modern food delivery website with intuitive ordering process and real-time tracking functionality.",
-      image: "/placeholder.svg?height=300&width=500&text=MOA+Delivery+Platform",
-      technologies: ["React", "JavaScript", "APIs", "Real-time Tracking"],
-      category: "Food Delivery",
-      status: "Completed",
-      period: "February 2023 - May 2023",
-      features: [
-        "Intuitive ordering system",
-        "Real-time tracking",
-        "Dynamic menu updates",
-        "User notifications",
-        "Brand-aligned UI",
-      ],
-    },
+    // {
+    //   id: 7,
+    //   title: "EEC - Estate Website",
+    //   description:
+    //     "E-powered estate website with endpoint integration and optimized performance for real estate management.",
+    //   image: "/placeholder.svg?height=300&width=500&text=EEC+Estate+Website",
+    //   technologies: ["React", "JavaScript", "APIs", "Real Estate"],
+    //   category: "Real Estate",
+    //   status: "Completed",
+    //   period: "February 2024 - June 2024",
+    //   features: [
+    //     "Property listings",
+    //     "API integrations",
+    //     "Performance optimization",
+    //     "Responsive design",
+    //     "User interface components",
+    //   ],
+    // },
+    // {
+    //   id: 8,
+    //   title: "MOA Delivery - Food Delivery",
+    //   description: "Modern food delivery website with intuitive ordering process and real-time tracking functionality.",
+    //   image: "/placeholder.svg?height=300&width=500&text=MOA+Delivery+Platform",
+    //   technologies: ["React", "JavaScript", "APIs", "Real-time Tracking"],
+    //   category: "Food Delivery",
+    //   status: "Completed",
+    //   period: "February 2023 - May 2023",
+    //   features: [
+    //     "Intuitive ordering system",
+    //     "Real-time tracking",
+    //     "Dynamic menu updates",
+    //     "User notifications",
+    //     "Brand-aligned UI",
+    //   ],
+    // },
   ]
 
   const categories = [
