@@ -292,10 +292,10 @@ function HomeContent() {
                   src="/images/profile-pic.jpg"
                   // /placeholder.svg?height=600&width=500&text=Daniel+Adekunle
                   alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
-                  height={1000}
-                  width={1000}
-                  layout="responsive"
-                  className="object-cover sm:objectcontain w-full h-full"
+                  // height={1000}
+                  // width={1000}
+                 fill
+                 className="object-cover object-top"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
