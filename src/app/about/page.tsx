@@ -173,183 +173,13 @@ function AboutContent() {
   ]
 
   const handleDownloadCV = () => {
-    const cvContent = `                             Adekunle Daniel Oluwaseyi 
-Frontend Developer  
-Email: 
-dadekunle31@gmail.com
-         Phone: 08163752061   
-Address: Abuja, Federal Capital Territory      Github: 
-https://github.com/Daniel4000-dev 
-Linkedin: https://www.linkedin.com/in/daniel-adekunle-oluwaseyi/ 
- 
-    PROFESSIONAL SUMMARY 
-Self-motivated and enthusiastic frontend developer with hands-on experience designing 
-appealing user experiences. Proficient in the latest technologies and frameworks, committed to 
-creating visually attractive and responsive websites. I am eager to offer my skills and 
-experience to a vibrant firm devoted to continual skill development via mentoring and difficult 
-initiatives. 
- 
-WORK EXPERIENCE 
-Frontend Developer  
-KOYI 
-October 2024 – present 
-● Collaborated with a team of developers to build a comprehensive online 
-learning platform, enabling users to access courses, hire professionals, and 
-engage with instructors through a messaging system. 
-● Designed and developed user-friendly UI components for course listings, 
-professional profiles, and messaging interfaces, ensuring seamless navigation 
-and interaction for learners and instructors. 
-● Integrated key functionalities including course loading, real-time messaging, and 
-user profile management, enhancing the platform's interactivity and 
-accessibility. 
-● Optimized UI for responsiveness, ensuring the platform was fully accessible 
-across multiple devices, improving the learning experience for users on both 
-mobile and desktop. 
-● Worked on the overall design consistency, implementing clean and modern 
-design elements that aligned with the platform's goals of providing a 
-professional, engaging online learning environment.
- 
-Frontend Developer  
-OnionPay 
-September 2023 – December 2023 
-● Collaborated in the development of a user-friendly digital payment platform, 
-focusing on enhancing the UI for seamless user interactions 
-
-● Designed and implemented UI components for key features such as payment 
-links, receipt generation, and transaction management, ensuring a smooth 
-experience. 
-● Optimized the dashboard layout, providing an intuitive interface for users to 
-track payments and manage revenue efficiently. 
-● Worked on improving user accessibility, integrating responsive design elements 
-for mobile and desktop platforms. 
-● Contributed to the visual design, maintaining a consistent and engaging aesthetic 
-across the app, improving the overall user experience. 
- 
-Frontend Developer 
-Megawins 
-September 2024 – March 2025 
-● Led UI/UX design for a secure, community-focused gaming and transaction 
-platform, ensuring a seamless user experience across multiple devices. 
-● Developed key web components for gaming functionalities, including game 
-history tracking, secure payment systems, and dynamic user profiles. 
-● Collaborated with backend teams to integrate secure payment processing and 
-multi-factor authentication, ensuring data integrity and user security. 
-● Optimized platform scalability using Tailwind CSS and modular UI elements, 
-ensuring peak performance during high-traffic events. 
-● Streamlined user interactions by designing intuitive navigation and dynamic 
-feedback systems, boosting engagement and retention. 
-Mobile Developer 
-LukeHealth 
-November 2024 – present 
-● Collaborated with a development team to create LukeHealth, a medical app 
-designed for users to create personalized profiles, book appointments, and store 
-essential health information. 
-● Designed and implemented user interfaces for profile creation, appointment 
-scheduling, and health tracking, enabling users to manage their medical needs 
-seamlessly. 
-● Integrated features allowing doctors to monitor patient health, including 
-prescription tracking, dosage management, and real-time updates on patient 
-progress. 
-● Developed secure data storage systems to ensure sensitive health information is 
-safely stored and easily accessible for doctors during check-ups and 
-consultations. 
-● Optimized the app's usability, focusing on creating an intuitive flow for both 
-patients and healthcare providers to enhance the overall user experience, 
-improving patient care and ease of access to medical services. 
-Frontend Developer 
-GreenLeaf 
-June 2023 – September 2023 
-
-● Built a responsive website for an organization to enhance their online presence 
-and improve user engagement. 
-● Designed custom UI components, ensuring a seamless user experience across 
-devices. 
-● Optimized website performance and integrated third-party APIs for additional 
-functionality. 
-● Conducted rigorous testing to ensure compatibility, security, and scalability. 
-Frontend Developer 
-MOA Delivery 
-February 2023 – May 2023 
-● Developed a modern, user-friendly website for a food delivery franchise, 
-featuring an intuitive ordering process and real-time tracking. 
-● Implemented UI components aligned with the brand's identity, enhancing user 
-retention. 
-● Integrated API endpoints for dynamic menu updates, order placement, and user 
-notifications. 
-● Focused on responsive design and performance optimization to ensure a 
-seamless experience for users on both mobile and desktop platforms.   
-Frontend Developer
-      
-EEC       
-February 2024 – June 2024   
-● Collaborated with a team to develop an e-powered estate website. 
-● I integrated endpoints and put logic from the Swagger documentation into practice. 
-● I created visually beautiful and cohesive user interface (UI) components that improve 
-the development process and user experience. 
-● I optimized web pages for maximum speed and scalability. 
-              
-Frontend Developer 
- 
-         
-MarcheSolution       
-September 2023 – December 2023     
- 
-● Collaborated with a frontend team to develop a large-scale school management 
-platform with custom system integrations, some of which are student progress, 
-analysis, ID card & certificate generation, and online exam creation. 
-● Designed and implemented multiple components to enhance the efficiency and 
-standardization of the user interface system. 
-● Ensured code quality and standard to ensure a clean and scalable codebase. 
-● 
-Integrated endpoints using proper documentation with Swager. 
-      
-Frontend Developer 
- 
-         
-OneWallet MFB         
-January 2023 – October 2023 
-● Collaborated with a team to develop a secure, community-based digital 
-payment platform aimed at revolutionizing local markets in Africa. 
-
-● Designed and implemented user-centric UI components for the OneWallet 
-website to enhance user experience and accessibility. 
-● Integrated endpoints and developed robust functionalities for key features such 
-as tailored rewards, secure payment systems, and identity verification. 
-● Optimized web pages for scalability and multi-factor authentication. 
- 
-SKILLS 
-Web Development: React, NextJs, HTML/CSS 
-Languages: Javascript, Typescript, Python, 
-Database: Firestore, Firebase RTDB, Mongodb 
-Favourite UI Framework: Shadcn UI, Tailwind CSS 
- 
-     EDUCATION 
-BEng Electrical Electronics Engineering 
-Air Force Institute of Technology 
-January  2020 - October  2024     |     mando, Kaduna State  
- 
-     CERTIFICATIONS 
-Certified in Cybersecurity 
-ISC2 
-November 2022 
- 
-Introduction to Cloud Computing 
-simplilearn 
-November 2024 
- 
-Career Essentials in Generative AI by Microsoft and LinkedIn 
-linkedIn 
-June 2025  `
-
-    const blob = new Blob([cvContent], { type: "text/plain" })
-    const url = window.URL.createObjectURL(blob)
+    const path = "/cv.pdf"
     const a = document.createElement("a")
-    a.href = url
-    a.download = "Adekunle_Daniel_Oluwaseyi_CV.txt"
+    a.href = path
+    a.download = "Adekunle_Daniel_Oluwaseyi_CV.pdf"
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
-    window.URL.revokeObjectURL(url)
   }
 
   const handleContactMe = () => {
@@ -459,11 +289,14 @@ June 2025  `
             >
               <div className="relative h-[500px] w-full overflow-hidden rounded-3xl">
                 <Image
-                  src="/placeholder.svg?height=500&width=400&text=Daniel+Adekunle"
-                  alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
-                  fill
-                  className="object-cover"
-                />
+                                 src="/images/profile-pic.jpg"
+                                 // /placeholder.svg?height=600&width=500&text=Daniel+Adekunle
+                                 alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
+                                 height={1000}
+                                 width={1000}
+                                 className="object-contain"
+                                 priority
+                               />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex items-center gap-4 text-white">
@@ -641,11 +474,14 @@ June 2025  `
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gray-200">
                     <Image
-                      src="/placeholder.svg?height=48&width=48"
-                      alt={testimonial.author}
-                      fill
-                      className="object-cover"
-                    />
+                                     src="/images/profile-pic.jpg"
+                                     // /placeholder.svg?height=600&width=500&text=Daniel+Adekunle
+                                     alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
+                                     height={1000}
+                                     width={1000}
+                                     className="object-contain"
+                                     priority
+                                   />
                   </div>
                   <div>
                     <p className="font-bold text-brand-dark">{testimonial.author}</p>
