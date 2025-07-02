@@ -185,7 +185,7 @@ function ProjectsContent() {
       title: "Megawins - Gaming Platform",
       description:
         "Secure, community-focused gaming and transaction platform with payment processing and user profiles.",
-      image: "/placeholder.svg?height=300&width=500&text=Megawins+Gaming+Platform",
+      image: "/images/megawins.png",
       technologies: ["React", "Tailwind CSS", "Payment APIs", "Authentication"],
       category: "Web Application",
       status: "Completed",
@@ -197,13 +197,14 @@ function ProjectsContent() {
         "Multi-factor authentication",
         "Scalable UI components",
       ],
+      liveLink: "https://megawins.com.ng/",
     },
     {
       id: 4,
       title: "OnionPay - Payment Platform",
       description:
         "User-friendly digital payment platform with payment links, receipt generation, and transaction management.",
-      image: "/placeholder.svg?height=300&width=500&text=OnionPay+Payment+Platform",
+      image: "/images/onionpay.png",
       technologies: ["React", "JavaScript", "Payment APIs", "Dashboard UI"],
       category: "Fintech",
       status: "Completed",
@@ -215,6 +216,7 @@ function ProjectsContent() {
         "Dashboard analytics",
         "Mobile responsive design",
       ],
+      liveLink: "https://onionpay.io/",
     },
     // {
     //   id: 5,
@@ -239,7 +241,7 @@ function ProjectsContent() {
       title: "OneWallet MFB - Digital Payment",
       description:
         "Secure, community-based digital payment platform for African local markets with rewards and identity verification.",
-      image: "/placeholder.svg?height=300&width=500&text=OneWallet+MFB+Platform",
+      image: "/images/onewallet.png",
       technologies: ["React", "JavaScript", "Payment Systems", "Security"],
       category: "Fintech",
       status: "Completed",
@@ -251,7 +253,28 @@ function ProjectsContent() {
         "Multi-factor authentication",
         "Community features",
       ],
+      liveLink: "https://www.onewalletweb.com/",
     },
+    {
+  id: 7,
+  title: "AET Ads - Advertising Platform",
+  description:
+    "Unleash the power of strategic advertising by elevating your brand's visibility with YouCanReach. Empowering you to become the hero of your advertising journey, this platform provides insightful analytics and easy-to-share reports.",
+  image: "/images/aet.png",
+  technologies: ["React", "Next.js", "JavaScript", "Analytics", "AdTech"],
+  category: "Advertising",
+  status: "Completed",
+  period: "March 2024 - Present",
+  features: [
+    "Live reporting and performance tracking",
+    "Real-time analytics for targeted feedback",
+    "Effortless sharing of advertising data",
+    "Seamless integration with multiple ad platforms",
+    "User-friendly dashboard for performance analysis",
+  ],
+  liveLink: "https://ads.aet.ng/", // Replace with the actual link
+}
+
     // {
     //   id: 7,
     //   title: "EEC - Estate Website",
@@ -390,9 +413,9 @@ function ProjectsContent() {
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    width={500}
-                    height={300}
-                    className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={1000}
+                    height={1000}
+                    className="h-48 w-full object-fill transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute top-4 right-4">
                     <Badge
@@ -437,11 +460,16 @@ function ProjectsContent() {
                     {project.category}
                   </Badge>
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="h-8 w-8 p-0 bg-transparent">
-                      <Github className="h-4 w-4" />
+                    <Button size="sm" variant="outline" className="h-8 w-8 p-0 bg-transparent text-black">
+                      <Github className="h-4 w-4 text-black" />
                     </Button>
-                    <Button size="sm" variant="outline" className="h-8 w-8 p-0 bg-transparent">
-                      <ExternalLink className="h-4 w-4" />
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="h-8 w-8 p-0 bg-transparent text-black"
+                      onClick={() => window.open(project.liveLink, "_blank")}
+                    >
+                      <ExternalLink className="h-4 w-4 text-black" />
                     </Button>
                   </div>
                 </div>

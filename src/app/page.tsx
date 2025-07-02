@@ -485,7 +485,8 @@ function HomeContent() {
           >
             <Link href="/project">
               <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover">
-                View All Projects
+                {/* View All Projects */}
+                View Some Live Projects
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
