@@ -40,7 +40,7 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/service", label: "Services" },
+    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -294,7 +294,7 @@ function AboutContent() {
                                  alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
                                  height={1000}
                                  width={1000}
-                                 className="object-cover sm:object-contain w-full h-full"
+                                 className="object-cover sm:object-contain"
                                  priority
                                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -472,7 +472,7 @@ function AboutContent() {
                 <div className="mb-4 text-2xl text-brand-blue">&quot;</div>
                 <p className="mb-6 text-muted-foreground">{testimonial.quote}</p>
                 <div className="flex items-center gap-4">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gray-200">
+                  {/* <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gray-200">
                     <Image
                                      src="/images/profile-pic.jpg"
                                      // /placeholder.svg?height=600&width=500&text=Daniel+Adekunle
@@ -482,7 +482,7 @@ function AboutContent() {
                                      className="object-contain"
                                      priority
                                    />
-                  </div>
+                  </div> */}
                   <div>
                     <p className="font-bold text-brand-dark">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.position}</p>

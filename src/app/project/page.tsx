@@ -41,7 +41,7 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/service", label: "Services" },
+    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -141,7 +141,10 @@ function Navbar() {
 
 // Projects content inline
 function ProjectsContent() {
-  const [activeFilter, setActiveFilter] = useState("All")
+  const [activeFilter,
+    //  setActiveFilter
+
+  ] = useState("All")
 
   const projects = [
     // {
@@ -312,15 +315,15 @@ function ProjectsContent() {
     // },
   ]
 
-  const categories = [
-    "All",
-    "Web Application",
-    "Mobile Application",
-    "Fintech",
-    "Education",
-    "Real Estate",
-    "Food Delivery",
-  ]
+  // const categories = [
+  //   "All",
+  //   "Web Application",
+  //   "Mobile Application",
+  //   "Fintech",
+  //   "Education",
+  //   "Real Estate",
+  //   "Food Delivery",
+  // ]
 
   const filteredProjects =
     activeFilter === "All" ? projects : projects.filter((project) => project.category === activeFilter)
@@ -361,7 +364,7 @@ function ProjectsContent() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 bg-white">
+      {/* <section className="py-8 bg-white">
         <div className="container">
           <motion.div
             className="flex flex-wrap justify-center gap-4"
@@ -393,7 +396,7 @@ function ProjectsContent() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Projects Grid */}
       <section className="py-16 md:py-24 bg-gray-50">
@@ -497,8 +500,8 @@ function ProjectsContent() {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { number: "10+", label: "Projects Completed", icon: "🚀" },
-              { number: "5", label: "Industries Served", icon: "🏢" },
+              { number: "7+", label: "Projects Completed", icon: "🚀" },
+              { number: "4", label: "Industries Served", icon: "🏢" },
               { number: "3+", label: "Years Experience", icon: "⏱️" },
               { number: "100%", label: "Client Satisfaction", icon: "⭐" },
             ].map((stat, index) => (

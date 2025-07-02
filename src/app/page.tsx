@@ -40,7 +40,7 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/service", label: "Services" },
+    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -294,7 +294,7 @@ function HomeContent() {
                   alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
                   height={1000}
                   width={1000}
-                  className="object-cover sm:object-contain w-full h-full"
+                  className="object-cover sm:object-contain"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>

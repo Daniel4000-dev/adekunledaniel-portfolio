@@ -39,7 +39,7 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/service", label: "Services" },
+    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -155,7 +155,7 @@ function ResumeContent() {
 
   const achievements = [
     {
-      title: "10+ Web Applications",
+      title: "7+ Web Applications",
       description:
         "Successfully built and deployed over 10 production-ready web applications using modern technologies.",
       icon: "🚀",
