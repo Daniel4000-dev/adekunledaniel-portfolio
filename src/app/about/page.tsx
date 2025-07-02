@@ -294,7 +294,8 @@ function AboutContent() {
                                  alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
                                  height={1000}
                                  width={1000}
-                                 className="object-cover sm:object-contain"
+                                 layout="responsive"
+                                 className="object-cover h-full w-full"
                                  priority
                                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
