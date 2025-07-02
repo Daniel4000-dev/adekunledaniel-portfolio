@@ -294,7 +294,7 @@ function HomeContent() {
                   alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
                   height={1000}
                   width={1000}
-                  className="object-contain"
+                  className="object-cover sm:object-contain"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
