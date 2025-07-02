@@ -1,142 +1,138 @@
 "use client"
-import { PortfolioCard } from "@/components/molecules/portfolioCard"
-import { Button } from "@/components/ui/button"
+
 import { motion } from "framer-motion"
-import { AnimatedText } from "@/components/atoms/animatedText"
 import { useState } from "react"
+import { ExternalLink, Github } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { projectCategories, projects } from "@/data/projects"
+import { SectionHeading } from "@/components/atoms/sectionHeading"
+
 
 export function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState("All")
 
-  const portfolioItems = [
-    {
-      title: "Lirante",
-      imageUrl: "/placeholder.svg?height=300&width=600",
-      href: "/portfolio/lirante",
-    },
-    {
-      title: "Lirante",
-      imageUrl: "/placeholder.svg?height=300&width=600",
-      href: "/portfolio/lirante",
-    },
-  ]
-
-  const categories = ["All", "Landing Page", "Product Design", "Animation", "Glassmorphism", "Cards"]
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects.filter((project) => project.featured)
+      : projects.filter((project) => project.category === activeCategory && project.featured)
 
   return (
-    <section className="py-16 md:py-24">
-      <div className="container">
-        <div className="mb-8 flex items-center justify-between">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <AnimatedText
-              text="Lets have a look at my Portfolio"
-              highlightedWord="Portfolio"
-              className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button variant="outline" className="hidden md:inline-flex">
-              See All
-            </Button>
-          </motion.div>
-        </div>
+    <section className="py-20 bg-white" id="portfolio">
+      <div className="container mx-auto px-4">
+        <SectionHeading
+          subtitle="My Work"
+          title="Featured Projects"
+          description="A showcase of my recent work and the technologies I've used to build them."
+        />
 
-        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {portfolioItems.map((item, index) => (
-            <PortfolioCard key={index} title={item.title} imageUrl={item.imageUrl} href={item.href} index={index} />
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {projectCategories.slice(0, 5).map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-2 rounded-full font-medium transition-all ${
+                activeCategory === category ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {category}
+            </button>
           ))}
         </div>
 
-        <motion.div
-          className="mb-8 flex justify-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex space-x-2">
-            {[1, 2, 3, 4].map((dot, index) => (
-              <motion.span
-                key={dot}
-                className={`block h-2 w-2 rounded-full ${index === 0 ? "bg-brand-orange" : "bg-gray-300"}`}
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.5 }}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="mb-12 flex flex-wrap justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          {categories.map((category, index) => (
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, index) => (
             <motion.div
-              key={category}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 10 }}
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group"
             >
-              <Button
-                variant="outline"
-                className={`rounded-full ${
-                  activeCategory === category ? "bg-brand-orange text-white hover:bg-brand-orange/90" : "bg-gray-100"
-                }`}
-                onClick={() => setActiveCategory(category)}
-              >
-                {category}
-              </Button>
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white rounded-full text-gray-900 hover:bg-gray-100 transition-colors"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white rounded-full text-gray-900 hover:bg-gray-100 transition-colors"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm text-blue-600 font-medium">{project.category}</span>
+                  <span
+                    className={`text-xs px-2 py-1 rounded-full ${
+                      project.status === "Completed"
+                        ? "bg-green-100 text-green-600"
+                        : project.status === "In Progress"
+                          ? "bg-blue-100 text-blue-600"
+                          : "bg-gray-100 text-gray-600"
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <span key={tech} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded font-medium">
+                      +{project.technologies.length - 3} more
+                    </span>
+                  )}
+                </div>
+              </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         <motion.div
-          className="text-center"
+          className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <motion.h3
-            className="mb-4 text-3xl font-bold"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            viewport={{ once: true }}
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Lirante - Food Delivery Solution
-          </motion.h3>
-          <motion.p
-            className="mx-auto max-w-3xl text-muted-foreground"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            viewport={{ once: true }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
-          </motion.p>
+            View All Projects
+            <ExternalLink className="ml-2 w-4 h-4" />
+          </Link>
         </motion.div>
       </div>
     </section>

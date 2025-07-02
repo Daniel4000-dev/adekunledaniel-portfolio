@@ -4,11 +4,12 @@ interface SectionHeadingProps {
   title: string
   subtitle?: string
   highlightedWord?: string
+  description?: string
   className?: string
   align?: "left" | "center" | "right"
 }
 
-export function SectionHeading({ title, subtitle, highlightedWord, className, align = "left" }: SectionHeadingProps) {
+export function SectionHeading({ title, subtitle, highlightedWord, description, className, align = "left" }: SectionHeadingProps) {
   const alignmentClasses = {
     left: "text-left",
     center: "text-center",
@@ -26,6 +27,7 @@ export function SectionHeading({ title, subtitle, highlightedWord, className, al
         className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
         dangerouslySetInnerHTML={{ __html: highlightedTitle }}
       />
+      {description && <p className="text-lg text-muted-foreground">{description}</p>}
     </div>
   )
 }

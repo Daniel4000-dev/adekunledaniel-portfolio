@@ -1,68 +1,62 @@
-"use client"
-import { ServiceCard } from "@/components/molecules/serviceCard"
-import { motion } from "framer-motion"
-import { AnimatedText } from "@/components/atoms/animatedText"
+// "use client"
 
-export function ServicesSection() {
-  const services = [
-    {
-      title: "UI/UX Design",
-      imageUrl: "/placeholder.svg?height=400&width=300",
-      href: "/services/ui-ux-design",
-    },
-    {
-      title: "Web Design",
-      imageUrl: "/placeholder.svg?height=400&width=300",
-      href: "/services/web-design",
-    },
-    {
-      title: "Landing Page",
-      imageUrl: "/placeholder.svg?height=400&width=300",
-      href: "/services/landing-page",
-    },
-  ]
+// import { motion } from "framer-motion"
+// import { Code, Globe, Smartphone, Database } from "lucide-react"
+// import { services } from "@/data/skills"
+// import { SectionHeading } from "@/components/atoms/sectionHeading"
 
-  return (
-    <section className="bg-black py-16 md:py-24">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <AnimatedText
-            text="My Services"
-            highlightedWord="Services"
-            className="mb-12 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl"
-          />
-        </motion.div>
+// const iconMap = {
+//   Code,
+//   Globe,
+//   Smartphone,
+//   Database,
+// }
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              imageUrl={service.imageUrl}
-              href={service.href}
-              index={index}
-            />
-          ))}
-        </div>
+// export function ServicesSection() {
+//   return (
+//     <section className="py-20 bg-white" id="services">
+//       <div className="container mx-auto px-4">
+//         <SectionHeading
+//           subtitle="What I Do"
+//           title="Services I Offer"
+//           description="I provide comprehensive frontend development services to help bring your ideas to life with modern, scalable solutions."
+//         />
 
-        <motion.div
-          className="mt-8 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p className="max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate,
-            bibendum sodales
-          </p>
-        </motion.div>
-      </div>
-    </section>
-  )
-}
+//         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+//           {services.map((service, index) => {
+//             const IconComponent = iconMap[service.icon as keyof typeof iconMap]
+
+//             return (
+//               <motion.div
+//                 key={service.id}
+//                 initial={{ opacity: 0, y: 30 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 transition={{ duration: 0.6, delay: index * 0.1 }}
+//                 viewport={{ once: true }}
+//                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+//               >
+//                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+//                   <IconComponent className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+//                 </div>
+
+//                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+//                 <p className="text-gray-600 mb-4">{service.description}</p>
+
+//                 <ul className="space-y-2 mb-4">
+//                   {service.features.slice(0, 3).map((feature, idx) => (
+//                     <li key={idx} className="text-sm text-gray-500 flex items-center">
+//                       <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+//                       {feature}
+//                     </li>
+//                   ))}
+//                 </ul>
+
+//                 {service.price && <p className="text-blue-600 font-semibold">{service.price}</p>}
+//               </motion.div>
+//             )
+//           })}
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }

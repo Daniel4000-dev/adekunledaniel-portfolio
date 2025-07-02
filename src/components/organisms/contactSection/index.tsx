@@ -1,127 +1,197 @@
-"use client"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { motion } from "framer-motion"
-import { AnimatedText } from "@/components/atoms/animatedText"
+// "use client"
 
-export function ContactSection() {
-  return (
-    <section className="py-16 md:py-24">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-12 text-center"
-        >
-          <AnimatedText
-            text="Have an Awsome Project Idea? Let's Discuss"
-            highlightedWord="Let's Discuss"
-            className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
-          />
-        </motion.div>
+// import type React from "react"
 
-        <motion.div
-          className="mx-auto max-w-2xl"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <motion.div
-            className="flex overflow-hidden rounded-full border"
-            whileHover={{ boxShadow: "0 4px 14px 0 rgba(0,0,0,0.1)" }}
-          >
-            <div className="flex items-center bg-gray-100 px-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-brand-orange"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-            </div>
-            <Input type="email" placeholder="Enter Email Address" className="flex-1 border-0 focus-visible:ring-0" />
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="rounded-l-none bg-brand-orange hover:bg-brand-orange/90">Send</Button>
-            </motion.div>
-          </motion.div>
+// import { motion } from "framer-motion"
+// import { Mail, Phone, MapPin, Send } from "lucide-react"
+// import { useState } from "react"
+// import Image from "next/image"
+// import { SectionHeading } from "@/components/atoms/sectionHeading"
+// import { SocialIcons } from "@/components/atoms/icon/socialIcons"
+// import { personalInfo } from "@/data/personalInfo"
 
-          <motion.div
-            className="mt-8 flex flex-wrap justify-center gap-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="flex items-center gap-2"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-brand-orange"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span>4.9/5 Average Ratings</span>
-            </motion.div>
-            <motion.div
-              className="flex items-center gap-2"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.6 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-brand-orange"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>25+ Winning Awards</span>
-            </motion.div>
-            <motion.div
-              className="flex items-center gap-2"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.7 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-brand-orange"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>Certified Developer</span>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  )
-}
+// export function ContactSection() {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     subject: "",
+//     message: "",
+//   })
+
+//   const handleSubmit = (e: React.FormEvent) => {
+//     e.preventDefault()
+//     // Handle form submission here
+//     console.log("Form submitted:", formData)
+//     // Reset form
+//     setFormData({ name: "", email: "", subject: "", message: "" })
+//   }
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     setFormData((prev) => ({
+//       ...prev,
+//       [e.target.name]: e.target.value,
+//     }))
+//   }
+
+//   return (
+//     <section className="py-20 bg-white" id="contact">
+//       <div className="container mx-auto px-4">
+//         <SectionHeading
+//           subtitle="Get In Touch"
+//           title="Let's Work Together"
+//           description="Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can bring your ideas to life."
+//         />
+
+//         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+//           {/* Contact Info */}
+//           <motion.div
+//             initial={{ opacity: 0, x: -50 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.8 }}
+//             viewport={{ once: true }}
+//             className="space-y-8"
+//           >
+//             <div>
+//               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+
+//               <div className="space-y-6">
+//                 <div className="flex items-center gap-4">
+//                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+//                     <Mail className="w-6 h-6 text-blue-600" />
+//                   </div>
+//                   <div>
+//                     <p className="font-medium text-gray-900">Email</p>
+//                     <a href={`mailto:${personalInfo.email}`} className="text-blue-600 hover:text-blue-700">
+//                       {personalInfo.email}
+//                     </a>
+//                   </div>
+//                 </div>
+
+//                 <div className="flex items-center gap-4">
+//                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+//                     <Phone className="w-6 h-6 text-blue-600" />
+//                   </div>
+//                   <div>
+//                     <p className="font-medium text-gray-900">Phone</p>
+//                     <a href={`tel:${personalInfo.phone}`} className="text-blue-600 hover:text-blue-700">
+//                       {personalInfo.phone}
+//                     </a>
+//                   </div>
+//                 </div>
+
+//                 <div className="flex items-center gap-4">
+//                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+//                     <MapPin className="w-6 h-6 text-blue-600" />
+//                   </div>
+//                   <div>
+//                     <p className="font-medium text-gray-900">Location</p>
+//                     <p className="text-gray-600">{personalInfo.location}</p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div>
+//               <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Me</h4>
+//               <SocialIcons variant="filled" />
+//             </div>
+
+//             <div className="relative">
+//               <Image
+//                 src="/images/contact.png"
+//                 alt="Contact illustration"
+//                 width={400}
+//                 height={300}
+//                 className="rounded-xl"
+//               />
+//             </div>
+//           </motion.div>
+
+//           {/* Contact Form */}
+//           <motion.div
+//             initial={{ opacity: 0, x: 50 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.8, delay: 0.2 }}
+//             viewport={{ once: true }}
+//           >
+//             <form onSubmit={handleSubmit} className="space-y-6">
+//               <div className="grid md:grid-cols-2 gap-6">
+//                 <div>
+//                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+//                     Full Name
+//                   </label>
+//                   <input
+//                     type="text"
+//                     id="name"
+//                     name="name"
+//                     value={formData.name}
+//                     onChange={handleChange}
+//                     required
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+//                     placeholder="Your full name"
+//                   />
+//                 </div>
+
+//                 <div>
+//                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+//                     Email Address
+//                   </label>
+//                   <input
+//                     type="email"
+//                     id="email"
+//                     name="email"
+//                     value={formData.email}
+//                     onChange={handleChange}
+//                     required
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+//                     placeholder="your.email@example.com"
+//                   />
+//                 </div>
+//               </div>
+
+//               <div>
+//                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+//                   Subject
+//                 </label>
+//                 <input
+//                   type="text"
+//                   id="subject"
+//                   name="subject"
+//                   value={formData.subject}
+//                   onChange={handleChange}
+//                   required
+//                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+//                   placeholder="What's this about?"
+//                 />
+//               </div>
+
+//               <div>
+//                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+//                   Message
+//                 </label>
+//                 <textarea
+//                   id="message"
+//                   name="message"
+//                   value={formData.message}
+//                   onChange={handleChange}
+//                   required
+//                   rows={6}
+//                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors resize-none"
+//                   placeholder="Tell me about your project..."
+//                 />
+//               </div>
+
+//               <button
+//                 type="submit"
+//                 className="w-full bg-blue-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group"
+//               >
+//                 Send Message
+//                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+//               </button>
+//             </form>
+//           </motion.div>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }

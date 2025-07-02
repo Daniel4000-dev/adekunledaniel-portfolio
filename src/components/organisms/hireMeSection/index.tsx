@@ -1,116 +1,81 @@
 "use client"
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { AnimatedText } from "@/components/atoms/animatedText"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
 export function HireMeSection() {
   return (
-    <section className="bg-gray-100 py-16 md:py-24">
-      <div className="container">
-        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+    <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            className="relative h-[500px] w-full overflow-hidden rounded-3xl bg-brand-orange"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6e8yXBX0Aoul91cEWarxebmoZcYucl.png"
-              alt="Why Hire Me"
-              fill
-              className="object-cover"
-            />
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Next Project?</h2>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              Let&apos;s work together to bring your ideas to life. I&apos;m available for freelance projects, full-time
+              opportunities, and consulting work.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors group"
+              >
+                Get In Touch
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                View My Work
+              </Link>
+            </div>
           </motion.div>
 
-          <div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="mb-8"
-            >
-              <AnimatedText
-                text="Why Hire me?"
-                highlightedWord="Hire me"
-                className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="relative w-full max-w-md mx-auto">
+              <Image
+                src="/images/hire-me.png"
+                alt="Let's work together"
+                width={400}
+                height={300}
+                className="rounded-xl shadow-2xl"
               />
-            </motion.div>
 
-            <motion.p
-              className="mb-8 text-muted-foreground"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate,
-              bibendum sodales
-            </motion.p>
-
-            <div className="mb-8 grid grid-cols-2 gap-8">
+              {/* Floating elements */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
+                className="absolute -top-4 -right-4 bg-white text-blue-600 p-4 rounded-lg shadow-lg"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
               >
-                <motion.p
-                  className="text-4xl font-bold"
-                  initial={{ scale: 0.8 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20,
-                    delay: 0.4,
-                  }}
-                  viewport={{ once: true }}
-                >
-                  450+
-                </motion.p>
-                <p className="text-muted-foreground">Project Completed</p>
+                <div className="text-2xl font-bold">5+</div>
+                <div className="text-sm">Years Experience</div>
               </motion.div>
+
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
+                className="absolute -bottom-4 -left-4 bg-white text-blue-600 p-4 rounded-lg shadow-lg"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1.5 }}
               >
-                <motion.p
-                  className="text-4xl font-bold"
-                  initial={{ scale: 0.8 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20,
-                    delay: 0.5,
-                  }}
-                  viewport={{ once: true }}
-                >
-                  450+
-                </motion.p>
-                <p className="text-muted-foreground">Project Completed</p>
+                <div className="text-2xl font-bold">50+</div>
+                <div className="text-sm">Projects Done</div>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90">
-                Hire me
-              </Button>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -2,28 +2,37 @@
 
 import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
+import { cn } from "@/lib/utils"
 
-export function ScrollIndicator() {
+interface ScrollIndicatorProps {
+  className?: string
+  targetId?: string
+}
+
+export function ScrollIndicator({ className, targetId }: ScrollIndicatorProps) {
+  const handleClick = () => {
+    if (targetId) {
+      const element = document.getElementById(targetId)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      window.scrollBy({ top: window.innerHeight, behavior: "smooth" })
+    }
+  }
+
   return (
-    <motion.div
-      className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center"
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.5 }}
+    <motion.button
+      onClick={handleClick}
+      className={cn(
+        "flex flex-col items-center gap-2 text-gray-400 hover:text-blue-600 transition-colors cursor-pointer",
+        className,
+      )}
+      animate={{ y: [0, 10, 0] }}
+      transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
     >
-      <span className="mb-2 text-sm">Scroll Down</span>
-      <motion.div
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "loop",
-        }}
-      >
-        <ChevronDown className="h-6 w-6" />
-      </motion.div>
-    </motion.div>
+      <span className="text-sm font-medium">Scroll</span>
+      <ChevronDown className="w-5 h-5" />
+    </motion.button>
   )
 }
