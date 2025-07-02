@@ -495,7 +495,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 pt-16 bg-brand-light">
+      <main className="flex-1 pt-12 bg-brand-light">
         <div className="container py-16 md:py-24">
           <SectionHeading
             title="Contact Me"

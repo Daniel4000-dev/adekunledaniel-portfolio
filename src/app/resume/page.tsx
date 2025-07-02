@@ -190,7 +190,7 @@ function ResumeContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-brand-light pt-32 pb-16">
+      <section className="bg-brand-light pt-12 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0 }}

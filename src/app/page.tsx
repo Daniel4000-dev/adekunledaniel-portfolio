@@ -161,7 +161,7 @@ function HomeContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-brand-light pt-32 pb-16 min-h-screen flex items-center">
+      <section className="bg-brand-light pt-12 pb-16 min-h-screen flex items-center">
         <div className="container">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>

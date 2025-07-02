@@ -189,7 +189,7 @@ function AboutContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-brand-light pt-32 pb-16">
+      <section className="bg-brand-light pt-12 pb-16">
         <div className="container">
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
             <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
