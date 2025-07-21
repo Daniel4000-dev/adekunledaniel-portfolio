@@ -742,11 +742,11 @@ function Footer() {
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/service" className="hover:text-brand-blue">
                   Services
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/resume" className="hover:text-brand-blue">
                   Resume
