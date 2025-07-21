@@ -463,9 +463,9 @@ function ProjectsContent() {
                     {project.category}
                   </Badge>
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="h-8 w-8 p-0 bg-transparent text-black">
+                    {/* <Button size="sm" variant="outline" className="h-8 w-8 p-0 bg-transparent text-black">
                       <Github className="h-4 w-4 text-black" />
-                    </Button>
+                    </Button> */}
                     <Button 
                       size="sm" 
                       variant="outline" 
