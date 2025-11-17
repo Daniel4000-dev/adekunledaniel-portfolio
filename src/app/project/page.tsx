@@ -305,7 +305,7 @@ function ProjectsContent() {
   image: "/images/quickcare.png",
   technologies: ["Gamification", "AI Doctor", "Healthcare Access"],
   category: "Web Application",
-  status: "Live",
+  status: "Completed",
   period: "2023",
   features: [
     "Health quizzes with daily rewards",
@@ -323,7 +323,7 @@ function ProjectsContent() {
   image: "/images/clickd.png",
   technologies: ["Gamification", "Matchmaking", "Rewards System"],
   category: "Web Application",
-  status: "Live",
+  status: "Completed",
   period: "2023",
   features: [
     "Daily Swipe & Win raffle entries",
