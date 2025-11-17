@@ -404,7 +404,7 @@ function HomeContent() {
                 description:
                   "Comprehensive online learning platform with course management, messaging system, and professional profiles.",
                 tech: ["React", "Next.js", "TypeScript"],
-                status: "Current Project",
+                status: "Completed",
               },
               {
                 title: "LukeHealth Medical App",
