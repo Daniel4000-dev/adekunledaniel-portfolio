@@ -147,24 +147,25 @@ function ProjectsContent() {
   ] = useState("All")
 
   const projects = [
-    // {
-    //   id: 1,
-    //   title: "KOYI - Online Learning Platform",
-    //   description:
-    //     "Comprehensive online learning platform enabling users to access courses, hire professionals, and engage with instructors through messaging system.",
-    //   image: "/placeholder.svg?height=300&width=500&text=KOYI+Learning+Platform",
-    //   technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    //   category: "Web Application",
-    //   status: "Current Project",
-    //   period: "October 2024 - Present",
-    //   features: [
-    //     "Course management system",
-    //     "Real-time messaging",
-    //     "Professional profiles",
-    //     "Responsive design",
-    //     "User authentication",
-    //   ],
-    // },
+    {
+      id: 1,
+      title: "KOYI - Online Learning Platform",
+      description:
+        "Comprehensive online learning platform enabling users to access courses, hire professionals, and engage with instructors through messaging system.",
+      image: "/images/koyi.png",
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      category: "Web Application",
+      status: "Current Project",
+      period: "October 2024 - August 2025",
+      features: [
+        "Course management system",
+        "Real-time messaging",
+        "Professional profiles",
+        "Responsive design",
+        "User authentication",
+      ],
+      liveLink: "https://koyi.africa",
+    },
     // {
     //   id: 2,
     //   title: "LukeHealth - Medical App",
@@ -248,7 +249,7 @@ function ProjectsContent() {
       technologies: ["React", "JavaScript", "Payment Systems", "Security"],
       category: "Fintech",
       status: "Completed",
-      period: "January 2023 - October 2023",
+      period: "January 2023 - October 2024",
       features: [
         "Tailored rewards system",
         "Secure payment processing",
@@ -267,7 +268,7 @@ function ProjectsContent() {
   technologies: ["React", "Next.js", "JavaScript", "Analytics", "AdTech"],
   category: "Advertising",
   status: "Completed",
-  period: "March 2024 - Present",
+  period: "March 2024 - January 2025",
   features: [
     "Live reporting and performance tracking",
     "Real-time analytics for targeted feedback",
@@ -275,7 +276,63 @@ function ProjectsContent() {
     "Seamless integration with multiple ad platforms",
     "User-friendly dashboard for performance analysis",
   ],
-  liveLink: "https://ads.aet.ng/", // Replace with the actual link
+  liveLink: "https://ads.aet.ng/", // Replace with the actual link 
+},
+{
+  id: 8,
+  title: "Kiiwii – Spin to Win Rewards Platform",
+  description:
+    "A gamified reward platform where users spin a virtual wheel for a chance to win vouchers for energy, mobile data, and TV subscriptions.",
+  image: "/placeholder.svg?height=300&width=500&text=Kiiwii+Spin+To+Win",
+  technologies: ["Gamification", "Rewards Engine", "Voucher Distribution"],
+  category: "Web Application",
+  status: "Live",
+  period: "2023",
+  features: [
+    "Virtual spinning wheel with randomized outcomes",
+    "Voucher rewards for energy, data, and TV subscriptions",
+    "Daily spin opportunities and returning attempts",
+    "Prize showcase listing all available rewards",
+    "Simple 3-step participation guide"
+  ],
+ liveLink: "https://kiiwii.co",
+},
+{
+  id: 9,
+  title: "QuickCare – Health Quiz & AI Doctor Platform",
+  description:
+    "A digital health platform offering quick 3-minute quizzes, daily rewards, and instant access to health information and AI-powered medical guidance.",
+  image: "/images/quickcare.png",
+  technologies: ["Gamification", "AI Doctor", "Healthcare Access"],
+  category: "Web Application",
+  status: "Live",
+  period: "2023",
+  features: [
+    "Health quizzes with daily rewards",
+    "AI doctor for instant medical insights",
+    "Quick 3-minute quiz attempts",
+    "Accessible health information",
+  ],
+  liveLink: "https://quickcare.ng",
+},
+{
+  id: 10,
+  title: "Click’d – Swipe & Win Matchmaking Platform",
+  description:
+    "A swipe-based matchmaking platform combining daily swipes, premium matching features, and a Swipe & Win raffle system where users can earn rewards like airtime.",
+  image: "/images/clickd.png",
+  technologies: ["Gamification", "Matchmaking", "Rewards System"],
+  category: "Web Application",
+  status: "Live",
+  period: "2023",
+  features: [
+    "Daily Swipe & Win raffle entries",
+    "Match probability boost engine",
+    "Swipe streak bonuses and reward multipliers",
+    "Instant airtime cashout for winnings",
+    "Premium 'Who Liked Me' visibility"
+  ],
+  liveLink: "https://clickd.africa",
 }
 
     // {
