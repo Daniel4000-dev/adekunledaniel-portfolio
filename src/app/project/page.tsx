@@ -155,7 +155,7 @@ function ProjectsContent() {
       image: "/images/koyi.png",
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
       category: "Web Application",
-      status: "Current Project",
+      status: "Completed",
       period: "October 2024 - August 2025",
       features: [
         "Course management system",
@@ -283,10 +283,10 @@ function ProjectsContent() {
   title: "Kiiwii – Spin to Win Rewards Platform",
   description:
     "A gamified reward platform where users spin a virtual wheel for a chance to win vouchers for energy, mobile data, and TV subscriptions.",
-  image: "/placeholder.svg?height=300&width=500&text=Kiiwii+Spin+To+Win",
+  image: "/images/kiiwii.png",
   technologies: ["Gamification", "Rewards Engine", "Voucher Distribution"],
   category: "Web Application",
-  status: "Live",
+  status: "Completed",
   period: "2023",
   features: [
     "Virtual spinning wheel with randomized outcomes",
