@@ -141,7 +141,7 @@ function Navbar() {
 // Home content inline
 function HomeContent() {
   const handleDownloadCV = () => {
-    const path = "/cv.pdf"
+    const path = "/Adekunle_Daniel_Oluwaseyi_CV.pdf"
     const a = document.createElement("a")
     a.href = path
     a.download = "Adekunle_Daniel_Oluwaseyi_CV.pdf"
@@ -356,11 +356,15 @@ function HomeContent() {
               { name: "TypeScript", level: "Proficient" },
               { name: "JavaScript", level: "Expert" },
               { name: "Tailwind CSS", level: "Expert" },
+              { name: "Chakra UI", level: "Proficient" },
+              { name: "Framer Motion", level: "Proficient" },
               { name: "HTML/CSS", level: "Expert" },
               { name: "Firebase", level: "Proficient" },
               { name: "MongoDB", level: "Intermediate" },
               { name: "Python", level: "Intermediate" },
               { name: "Shadcn UI", level: "Expert" },
+              { name: "Redux Toolkit", level: "Proficient" },
+              { name: "Zustand", level: "Proficient" },
               { name: "Git", level: "Proficient" },
               { name: "API Integration", level: "Advanced" },
             ].map((skill, index) => (
