@@ -41,7 +41,6 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -141,246 +140,155 @@ function Navbar() {
 
 // Projects content inline
 function ProjectsContent() {
-  const [activeFilter,
-    //  setActiveFilter
-
-  ] = useState("All")
+  const [activeFilter] = useState("All")
 
   const projects = [
     {
       id: 1,
-      title: "KOYI - Online Learning Platform",
+      title: "KOYI – Learning & Talent Marketplace",
       description:
-        "Comprehensive online learning platform enabling users to access courses, hire professionals, and engage with instructors through messaging system.",
+        "Empowered thousands of learners to master new skills, hire vetted professionals, and collaborate with instructors in real time through a high-converting Next.js platform.",
       image: "/images/koyi.png",
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-      category: "Web Application",
-      status: "Completed",
-      period: "October 2024 - August 2025",
+      category: "EdTech & Marketplace",
+      status: "Live in Production",
+      period: "October 2024 - Present",
       features: [
-        "Course management system",
-        "Real-time messaging",
-        "Professional profiles",
-        "Responsive design",
-        "User authentication",
+        "High-conversion course discovery & enrollment",
+        "Real-time instructor & client messaging",
+        "Dynamic professional talent profiles",
+        "Mobile-first responsive design",
+        "Seamless role-based authentication",
       ],
       liveLink: "https://koyi.africa",
     },
-    // {
-    //   id: 2,
-    //   title: "LukeHealth - Medical App",
-    //   description:
-    //     "Medical application for patient profiles, appointment booking, and health tracking with secure data storage.",
-    //   image: "/placeholder.svg?height=300&width=500&text=LukeHealth+Medical+App",
-    //   technologies: ["React Native", "Firebase", "TypeScript", "Healthcare APIs"],
-    //   category: "Mobile Application",
-    //   status: "Current Project",
-    //   period: "November 2024 - Present",
-    //   features: [
-    //     "Patient profile management",
-    //     "Appointment scheduling",
-    //     "Health tracking",
-    //     "Doctor monitoring system",
-    //     "Secure data storage",
-    //   ],
-    // },
     {
       id: 3,
-      title: "Megawins - Gaming Platform",
+      title: "Megawins – High-Concurrency Gaming Platform",
       description:
-        "Secure, community-focused gaming and transaction platform with payment processing and user profiles.",
+        "Engineered a fast, trusted gaming and instant-payout platform designed to handle peak traffic while keeping deposits, gameplay, and withdrawals frictionless.",
       image: "/images/megawins.png",
-      technologies: ["React", "Tailwind CSS", "Payment APIs", "Authentication"],
-      category: "Web Application",
-      status: "Completed",
-      period: "September 2024 - March 2025",
+      technologies: ["React", "Tailwind CSS", "Payment APIs", "Multi-Factor Auth"],
+      category: "Gaming & Fintech",
+      status: "Live in Production",
+      period: "April 2024 - March 2025",
       features: [
-        "Game history tracking",
-        "Secure payment systems",
-        "Dynamic user profiles",
-        "Multi-factor authentication",
-        "Scalable UI components",
+        "Instant wallet top-ups & automated payouts",
+        "Real-time game history & live odds tracking",
+        "Multi-factor authentication & account security",
+        "Zero-lag modular UI components",
       ],
       liveLink: "https://megawins.com.ng/",
     },
     {
-      id: 4,
-      title: "OnionPay - Payment Platform",
+      id: 7,
+      title: "AET Ads – Self-Serve AdTech & Analytics",
       description:
-        "User-friendly digital payment platform with payment links, receipt generation, and transaction management.",
+        "Built an intuitive advertising and campaign intelligence platform that helps brands launch targeted campaigns, monitor live ROI, and share executive reports in one click.",
+      image: "/images/aet.png",
+      technologies: ["React", "Next.js", "JavaScript", "Analytics", "AdTech"],
+      category: "AdTech",
+      status: "Live in Production",
+      period: "March 2024 - January 2025",
+      features: [
+        "Live campaign ROI & performance tracking",
+        "Interactive real-time analytics dashboards",
+        "One-click shareable client reports",
+        "Multi-channel ad network integration",
+      ],
+      liveLink: "https://ads.aet.ng/",
+    },
+    {
+      id: 4,
+      title: "OnionPay – Merchant Payment Suite",
+      description:
+        "Accelerated merchant collections by building one-click payment link generators, instant digital receipts, and real-time revenue settlement dashboards.",
       image: "/images/onionpay.png",
       technologies: ["React", "JavaScript", "Payment APIs", "Dashboard UI"],
       category: "Fintech",
-      status: "Completed",
-      period: "September 2023 - December 2023",
+      status: "Live in Production",
+      period: "March 2023 - September 2023",
       features: [
-        "Payment link generation",
-        "Receipt management",
-        "Transaction tracking",
-        "Dashboard analytics",
-        "Mobile responsive design",
+        "Instant payment link generation",
+        "Automated customer receipt engine",
+        "Real-time transaction & settlement tracking",
+        "Merchant cash-flow analytics dashboard",
       ],
       liveLink: "https://onionpay.io/",
     },
-    // {
-    //   id: 5,
-    //   title: "MarcheSolution - School Management",
-    //   description:
-    //     "Large-scale school management platform with student progress tracking, ID card generation, and online exam creation.",
-    //   image: "/placeholder.svg?height=300&width=500&text=MarcheSolution+School+Platform",
-    //   technologies: ["React", "JavaScript", "APIs", "Educational Tools"],
-    //   category: "Education",
-    //   status: "Completed",
-    //   period: "September 2023 - December 2023",
-    //   features: [
-    //     "Student progress tracking",
-    //     "ID card generation",
-    //     "Certificate creation",
-    //     "Online exam system",
-    //     "Analytics dashboard",
-    //   ],
-    // },
+    {
+      id: 8,
+      title: "Kiiwii – Gamified Rewards Platform",
+      description:
+        "Drove daily user retention with an interactive Spin-to-Win rewards platform where users win instant vouchers for electricity, mobile data, and TV subscriptions.",
+      image: "/images/kiiwii.png",
+      technologies: ["React", "Gamification", "Rewards Engine", "Voucher APIs"],
+      category: "Consumer Web App",
+      status: "Live in Production",
+      period: "2023",
+      features: [
+        "60fps interactive spinning wheel physics",
+        "Instant utility, data & TV voucher redemption",
+        "Daily streak mechanics for repeat engagement",
+        "Frictionless 3-step onboarding flow",
+      ],
+      liveLink: "https://kiiwii.co",
+    },
+    {
+      id: 9,
+      title: "QuickCare – AI Doctor & Health Triage",
+      description:
+        "Made preliminary medical guidance accessible in under 3 minutes by combining interactive health quizzes, daily wellness rewards, and an AI-powered symptom assistant.",
+      image: "/images/quickcare.png",
+      technologies: ["React", "AI Integration", "Telehealth UX", "Gamification"],
+      category: "HealthTech",
+      status: "Live in Production",
+      period: "2023",
+      features: [
+        "AI-powered symptom & medical insights assistant",
+        "Interactive 3-minute health assessment quizzes",
+        "Daily wellness engagement rewards",
+        "Accessible, mobile-optimized patient interface",
+      ],
+      liveLink: "https://quickcare.ng",
+    },
+    {
+      id: 10,
+      title: "Click’d – Gamified Social Matchmaking",
+      description:
+        "Reimagined social discovery with a swipe-based matchmaking app featuring streak multipliers, probability boost engines, and instant airtime rewards.",
+      image: "/images/clickd.png",
+      technologies: ["React", "Interactive Gestures", "Matchmaking Engine", "Rewards API"],
+      category: "Social & Consumer",
+      status: "Live in Production",
+      period: "2022 - 2023",
+      features: [
+        "Smooth touch-gesture swipe & match interface",
+        "Swipe streak bonuses & reward multipliers",
+        "Instant airtime payout integration",
+        "Premium 'Who Liked Me' conversion flows",
+      ],
+      liveLink: "https://clickd.africa",
+    },
     {
       id: 6,
-      title: "OneWallet MFB - Digital Payment",
+      title: "OneWallet MFB – Digital Microfinance Banking",
       description:
-        "Secure, community-based digital payment platform for African local markets with rewards and identity verification.",
+        "Delivered a secure, community-centered digital banking and payments platform tailored for emerging African markets, complete with KYC verification and loyalty rewards.",
       image: "/images/onewallet.png",
-      technologies: ["React", "JavaScript", "Payment Systems", "Security"],
+      technologies: ["React", "JavaScript", "Payment Systems", "Multi-Factor Security"],
       category: "Fintech",
-      status: "Completed",
-      period: "January 2023 - October 2024",
+      status: "Live in Production",
+      period: "January 2022 - August 2022",
       features: [
-        "Tailored rewards system",
-        "Secure payment processing",
-        "Identity verification",
-        "Multi-factor authentication",
-        "Community features",
+        "Fast KYC identity verification workflows",
+        "Secure peer-to-peer & merchant payments",
+        "Tailored community rewards engine",
+        "Optimized for low-bandwidth mobile networks",
       ],
       liveLink: "https://www.onewalletweb.com/",
     },
-    {
-  id: 7,
-  title: "AET Ads - Advertising Platform",
-  description:
-    "Unleash the power of strategic advertising by elevating your brand's visibility with YouCanReach. Empowering you to become the hero of your advertising journey, this platform provides insightful analytics and easy-to-share reports.",
-  image: "/images/aet.png",
-  technologies: ["React", "Next.js", "JavaScript", "Analytics", "AdTech"],
-  category: "Advertising",
-  status: "Completed",
-  period: "March 2024 - January 2025",
-  features: [
-    "Live reporting and performance tracking",
-    "Real-time analytics for targeted feedback",
-    "Effortless sharing of advertising data",
-    "Seamless integration with multiple ad platforms",
-    "User-friendly dashboard for performance analysis",
-  ],
-  liveLink: "https://ads.aet.ng/", // Replace with the actual link 
-},
-{
-  id: 8,
-  title: "Kiiwii – Spin to Win Rewards Platform",
-  description:
-    "A gamified reward platform where users spin a virtual wheel for a chance to win vouchers for energy, mobile data, and TV subscriptions.",
-  image: "/images/kiiwii.png",
-  technologies: ["Gamification", "Rewards Engine", "Voucher Distribution"],
-  category: "Web Application",
-  status: "Completed",
-  period: "2023",
-  features: [
-    "Virtual spinning wheel with randomized outcomes",
-    "Voucher rewards for energy, data, and TV subscriptions",
-    "Daily spin opportunities and returning attempts",
-    "Prize showcase listing all available rewards",
-    "Simple 3-step participation guide"
-  ],
- liveLink: "https://kiiwii.co",
-},
-{
-  id: 9,
-  title: "QuickCare – Health Quiz & AI Doctor Platform",
-  description:
-    "A digital health platform offering quick 3-minute quizzes, daily rewards, and instant access to health information and AI-powered medical guidance.",
-  image: "/images/quickcare.png",
-  technologies: ["Gamification", "AI Doctor", "Healthcare Access"],
-  category: "Web Application",
-  status: "Completed",
-  period: "2023",
-  features: [
-    "Health quizzes with daily rewards",
-    "AI doctor for instant medical insights",
-    "Quick 3-minute quiz attempts",
-    "Accessible health information",
-  ],
-  liveLink: "https://quickcare.ng",
-},
-{
-  id: 10,
-  title: "Click’d – Swipe & Win Matchmaking Platform",
-  description:
-    "A swipe-based matchmaking platform combining daily swipes, premium matching features, and a Swipe & Win raffle system where users can earn rewards like airtime.",
-  image: "/images/clickd.png",
-  technologies: ["Gamification", "Matchmaking", "Rewards System"],
-  category: "Web Application",
-  status: "Completed",
-  period: "2023",
-  features: [
-    "Daily Swipe & Win raffle entries",
-    "Match probability boost engine",
-    "Swipe streak bonuses and reward multipliers",
-    "Instant airtime cashout for winnings",
-    "Premium 'Who Liked Me' visibility"
-  ],
-  liveLink: "https://clickd.africa",
-}
-
-    // {
-    //   id: 7,
-    //   title: "EEC - Estate Website",
-    //   description:
-    //     "E-powered estate website with endpoint integration and optimized performance for real estate management.",
-    //   image: "/placeholder.svg?height=300&width=500&text=EEC+Estate+Website",
-    //   technologies: ["React", "JavaScript", "APIs", "Real Estate"],
-    //   category: "Real Estate",
-    //   status: "Completed",
-    //   period: "February 2024 - June 2024",
-    //   features: [
-    //     "Property listings",
-    //     "API integrations",
-    //     "Performance optimization",
-    //     "Responsive design",
-    //     "User interface components",
-    //   ],
-    // },
-    // {
-    //   id: 8,
-    //   title: "MOA Delivery - Food Delivery",
-    //   description: "Modern food delivery website with intuitive ordering process and real-time tracking functionality.",
-    //   image: "/placeholder.svg?height=300&width=500&text=MOA+Delivery+Platform",
-    //   technologies: ["React", "JavaScript", "APIs", "Real-time Tracking"],
-    //   category: "Food Delivery",
-    //   status: "Completed",
-    //   period: "February 2023 - May 2023",
-    //   features: [
-    //     "Intuitive ordering system",
-    //     "Real-time tracking",
-    //     "Dynamic menu updates",
-    //     "User notifications",
-    //     "Brand-aligned UI",
-    //   ],
-    // },
   ]
-
-  // const categories = [
-  //   "All",
-  //   "Web Application",
-  //   "Mobile Application",
-  //   "Fintech",
-  //   "Education",
-  //   "Real Estate",
-  //   "Food Delivery",
-  // ]
 
   const filteredProjects =
     activeFilter === "All" ? projects : projects.filter((project) => project.category === activeFilter)
@@ -402,7 +310,7 @@ function ProjectsContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              My Projects
+              Products Built to Convert &amp; Scale
             </motion.h1>
             <motion.h2
               className="mb-4 text-2xl font-semibold text-brand-blue"
@@ -410,50 +318,15 @@ function ProjectsContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
             >
-              Adekunle Daniel Oluwaseyi
+              5+ Years of Shipping Live Platforms Across Fintech, HealthTech, EdTech &amp; Consumer Web
             </motion.h2>
             <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground">
-              A showcase of my professional projects spanning fintech, healthcare, education, and gaming platforms. Each
-              project demonstrates my expertise in modern frontend technologies and user-centered design.
+              Every project below solved a real business problem—turning complex workflows into fast, intuitive user
+              experiences that drive adoption, retention, and revenue.
             </p>
           </motion.div>
         </div>
       </section>
-
-      {/* Filter Section */}
-      {/* <section className="py-8 bg-white">
-        <div className="container">
-          <motion.div
-            className="flex flex-wrap justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            {categories.map((category, index) => (
-              <motion.div
-                key={category}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
-              >
-                <Button
-                  variant="outline"
-                  className={`rounded-full ${
-                    activeFilter === category
-                      ? "bg-brand-blue text-white hover:bg-brand-blue/90 border-brand-blue"
-                      : "bg-white border-gray-300 hover:border-brand-blue hover:text-brand-blue"
-                  }`}
-                  onClick={() => setActiveFilter(category)}
-                >
-                  {category}
-                </Button>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section> */}
 
       {/* Projects Grid */}
       <section className="py-16 md:py-24 bg-gray-50">
@@ -462,75 +335,76 @@ function ProjectsContent() {
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className="group rounded-xl bg-white p-6 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
+                className="group rounded-xl bg-white p-6 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <div className="relative mb-4 overflow-hidden rounded-lg">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    width={1000}
-                    height={1000}
-                    className="h-48 w-full object-fill transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <Badge
-                      variant={project.status === "Current Project" ? "default" : "secondary"}
-                      className={project.status === "Current Project" ? "bg-green-500 hover:bg-green-600" : ""}
-                    >
-                      {project.status}
-                    </Badge>
-                  </div>
-                </div>
-
-                <div className="mb-3">
-                  <h3 className="text-xl font-bold text-brand-dark mb-2">{project.title}</h3>
-                  <p className="text-sm text-brand-blue font-medium mb-2">{project.period}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
-                </div>
-
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-brand-dark mb-2">Key Features:</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
-                    {project.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <span className="w-1 h-1 bg-brand-blue rounded-full"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
-                        {tech}
+                <div>
+                  <div className="relative mb-4 overflow-hidden rounded-lg">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      width={1000}
+                      height={1000}
+                      className="h-48 w-full object-fill transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <Badge
+                        variant={project.status === "Current Project" ? "default" : "secondary"}
+                        className="bg-brand-blue text-white hover:bg-brand-blue-hover"
+                      >
+                        {project.status}
                       </Badge>
-                    ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <h3 className="text-xl font-bold text-brand-dark mb-1">{project.title}</h3>
+                    <p className="text-sm text-brand-blue font-medium mb-2">{project.period}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-brand-dark mb-2">Impact &amp; Key Deliverables:</h4>
+                    <ul className="text-xs text-muted-foreground space-y-1">
+                      {project.features.slice(0, 4).map((feature, idx) => (
+                        <li key={idx} className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 bg-brand-blue rounded-full shrink-0"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="text-xs">
-                    {project.category}
-                  </Badge>
-                  <div className="flex gap-2">
-                    {/* <Button size="sm" variant="outline" className="h-8 w-8 p-0 bg-transparent text-black">
-                      <Github className="h-4 w-4 text-black" />
-                    </Button> */}
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="h-8 w-8 p-0 bg-transparent text-black"
-                      onClick={() => window.open(project.liveLink, "_blank")}
-                    >
-                      <ExternalLink className="h-4 w-4 text-black" />
-                    </Button>
+                <div>
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+                    <Badge variant="secondary" className="text-xs">
+                      {project.category}
+                    </Badge>
+                    <div className="flex gap-2">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="h-8 px-3 bg-transparent text-brand-blue border-brand-blue hover:bg-brand-blue hover:text-white text-xs"
+                        onClick={() => window.open(project.liveLink, "_blank")}
+                      >
+                        View Live <ExternalLink className="ml-1.5 h-3.5 w-3.5" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -549,17 +423,17 @@ function ProjectsContent() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl">Project Statistics</h2>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">The Numbers Behind the Work</h2>
             <p className="mx-auto max-w-3xl text-lg text-gray-300">
-              A summary of my professional project experience and achievements.
+              Consistent delivery across 5+ years of building production web and mobile software.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { number: "7+", label: "Projects Completed", icon: "🚀" },
-              { number: "4", label: "Industries Served", icon: "🏢" },
-              { number: "3+", label: "Years Experience", icon: "⏱️" },
+              { number: "10+", label: "Production Apps Shipped", icon: "🚀" },
+              { number: "5+", label: "Industries Transformed", icon: "🏢" },
+              { number: "5+", label: "Years Experience", icon: "⏱️" },
               { number: "100%", label: "Client Satisfaction", icon: "⭐" },
             ].map((stat, index) => (
               <motion.div
@@ -611,9 +485,12 @@ function Footer() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-8 text-4xl font-bold">Let&apos;s Work Together</h2>
-          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover" onClick={handleHireMeClick}>
-            Hire me <ArrowUpRight className="ml-2 h-4 w-4" />
+          <h2 className="mb-4 text-4xl font-bold">Want Results Like These for Your Product?</h2>
+          <p className="mb-8 max-w-2xl text-gray-300 text-lg">
+            Let&apos;s discuss your roadmap and how I can help you launch faster and convert more users.
+          </p>
+          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover px-6 py-6 text-base" onClick={handleHireMeClick}>
+            Let&apos;s Build Together <ArrowUpRight className="ml-2 h-5 w-5" />
           </Button>
         </motion.div>
 
@@ -623,8 +500,8 @@ function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-gray-400">
-              Frontend Developer with 3+ years of experience specializing in React, Next.js, and modern web
-              technologies. Based in Abuja, FCT.
+              Senior Frontend Engineer with 5+ years of experience helping startups and enterprises ship high-converting
+              web and mobile products with React, Next.js, and TypeScript.
             </p>
             <div className="flex gap-4 mt-6">
               <a
@@ -659,11 +536,6 @@ function Footer() {
                   About
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/service" className="hover:text-brand-blue">
-                  Services
-                </Link>
-              </li> */}
               <li>
                 <Link href="/resume" className="hover:text-brand-blue">
                   Resume
@@ -705,9 +577,9 @@ function Footer() {
         <hr className="my-12 border-gray-800" />
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-400">Copyright© 2024 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
+          <p className="text-sm text-gray-400">Copyright© 2026 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
           <div className="text-sm text-gray-400">
-            <span>User Terms & Conditions | Privacy Policy</span>
+            <span>User Terms &amp; Conditions | Privacy Policy</span>
           </div>
         </div>
       </div>

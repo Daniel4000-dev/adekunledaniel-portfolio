@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Menu, X, ArrowUpRight, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Menu, X, ArrowUpRight, Github, Linkedin, Mail, Phone, MapPin, CheckCircle2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { AnimatePresence } from "framer-motion"
 import Link from "next/link"
@@ -42,7 +42,6 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -151,7 +150,6 @@ function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
     console.log("Form submitted:", formData)
   }
 
@@ -163,7 +161,7 @@ function ContactSection() {
   }
 
   return (
-    <section className="py-16">
+    <section className="py-12">
       <div className="container">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Contact Information */}
@@ -173,11 +171,26 @@ function ContactSection() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="mb-6 text-2xl font-bold text-brand-blue">Get in Touch</h3>
-            <p className="mb-8 text-muted-foreground">
-              I&apos;m always interested in new opportunities and collaborations. Feel free to reach out if you have a
-              question or just want to say hi!
+            <h3 className="mb-4 text-2xl font-bold text-brand-blue">How I Can Help Your Team Win</h3>
+            <p className="mb-6 text-muted-foreground leading-relaxed">
+              With <strong>5+ years of production experience</strong>, I step in and deliver immediate value—whether you
+              need a senior frontend engineer to join your team full-time, launch a new MVP from scratch, or overhaul
+              your product&apos;s UI/UX for higher conversions.
             </p>
+
+            <ul className="mb-8 space-y-3 text-sm text-gray-700">
+              {[
+                "End-to-end Web & Mobile App Development (React, Next.js, React Native)",
+                "High-Converting UI/UX Revamps & Performance Optimization",
+                "Scalable TypeScript Architecture & Reusable Design Systems",
+                "Complex API, Payment Gateway & Real-Time Dashboard Integrations",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-5 w-5 text-brand-blue shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
@@ -185,7 +198,7 @@ function ContactSection() {
                   <Phone className="h-6 w-6 text-brand-blue" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Phone</h4>
+                  <h4 className="font-semibold">Direct Phone / WhatsApp</h4>
                   <a href="tel:08163752061" className="text-muted-foreground hover:text-brand-blue">
                     08163752061
                   </a>
@@ -197,7 +210,7 @@ function ContactSection() {
                   <Mail className="h-6 w-6 text-brand-blue" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Email</h4>
+                  <h4 className="font-semibold">Email (Replies within 24 hours)</h4>
                   <a href="mailto:dadekunle31@gmail.com" className="text-muted-foreground hover:text-brand-blue">
                     dadekunle31@gmail.com
                   </a>
@@ -210,13 +223,13 @@ function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p className="text-muted-foreground">Abuja, Federal Capital Territory</p>
+                  <p className="text-muted-foreground">Abuja, FCT • Available for Remote Roles Worldwide</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-8">
-              <h4 className="mb-4 font-semibold">Follow Me</h4>
+              <h4 className="mb-4 font-semibold">Connect With Me</h4>
               <div className="flex gap-4">
                 <a
                   href="https://github.com/Daniel4000-dev"
@@ -244,7 +257,12 @@ function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="rounded-2xl bg-white p-8 shadow-md border border-gray-200"
           >
+            <h3 className="mb-2 text-2xl font-bold text-brand-dark">Send Me a Message</h3>
+            <p className="mb-6 text-sm text-muted-foreground">
+              Tell me about your product, timeline, or open role—and let&apos;s explore how we can make it a success.
+            </p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
@@ -272,14 +290,14 @@ function ContactSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="your.email@example.com"
+                    placeholder="your.email@company.com"
                   />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="subject" className="mb-2 block text-sm font-medium">
-                  Subject *
+                  What are we building together? *
                 </label>
                 <Input
                   id="subject"
@@ -288,13 +306,13 @@ function ContactSection() {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Project inquiry"
+                  placeholder="e.g., Full-Time Senior Frontend Role, New SaaS MVP, UI Revamp"
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="mb-2 block text-sm font-medium">
-                  Message *
+                  Project or Role Details *
                 </label>
                 <Textarea
                   id="message"
@@ -302,14 +320,14 @@ function ContactSection() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your project..."
+                  placeholder="Share your goals, timeline, and what success looks like for your team..."
                   rows={6}
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-brand-blue hover:bg-brand-blue-hover">
-                Send Message
-                <ArrowUpRight className="ml-2 h-4 w-4" />
+              <Button type="submit" className="w-full bg-brand-blue hover:bg-brand-blue-hover py-6 text-base">
+                Let&apos;s Start the Conversation
+                <ArrowUpRight className="ml-2 h-5 w-5" />
               </Button>
             </form>
           </motion.div>
@@ -335,9 +353,12 @@ function Footer() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-8 text-4xl font-bold">Let&apos;s Work Together</h2>
-          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover" onClick={handleHireMeClick}>
-            Hire me <ArrowUpRight className="ml-2 h-4 w-4" />
+          <h2 className="mb-4 text-4xl font-bold">Ready to Build Something Users Will Love?</h2>
+          <p className="mb-8 max-w-2xl text-gray-300 text-lg">
+            Let&apos;s turn your product vision into a fast, scalable, and high-converting reality.
+          </p>
+          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover px-6 py-6 text-base" onClick={handleHireMeClick}>
+            Hire Me Today <ArrowUpRight className="ml-2 h-5 w-5" />
           </Button>
         </motion.div>
 
@@ -347,8 +368,8 @@ function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-gray-400">
-              Frontend Developer with 3+ years of experience specializing in React, Next.js, and modern web
-              technologies. Based in Abuja, FCT.
+              Senior Frontend Engineer with 5+ years of experience helping startups and enterprises ship high-converting
+              web and mobile products with React, Next.js, and TypeScript.
             </p>
             <div className="flex gap-4 mt-6">
               <a
@@ -383,11 +404,6 @@ function Footer() {
                   About
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/service" className="hover:text-brand-blue">
-                  Services
-                </Link>
-              </li> */}
               <li>
                 <Link href="/resume" className="hover:text-brand-blue">
                   Resume
@@ -429,9 +445,9 @@ function Footer() {
         <hr className="my-12 border-gray-800" />
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-400">Copyright© 2024 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
+          <p className="text-sm text-gray-400">Copyright© 2026 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
           <div className="text-sm text-gray-400">
-            <span>User Terms & Conditions | Privacy Policy</span>
+            <span>User Terms &amp; Conditions | Privacy Policy</span>
           </div>
         </div>
       </div>
@@ -460,7 +476,7 @@ function SectionHeading({
   }
 
   return (
-    <div className={cn("mb-12", alignmentClasses[align], className)}>
+    <div className={cn("mb-8", alignmentClasses[align], className)}>
       {subtitle && (
         <motion.p
           className="mb-2 text-sm font-medium uppercase tracking-wider text-brand-blue"
@@ -498,17 +514,17 @@ export default function ContactPage() {
       <main className="flex-1 pt-12 bg-brand-light">
         <div className="container py-16 md:py-24">
           <SectionHeading
-            title="Contact Me"
-            subtitle="Get In Touch"
-            highlightedWord="Contact Me"
+            title="Let's Build Your Next Big Win"
+            subtitle="Ready to Ship Faster & Scale Smarter?"
+            highlightedWord="Next Big Win"
             align="center"
-            className="mb-12"
+            className="mb-6"
           />
 
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center">
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              I&apos;m always interested in new opportunities and collaborations. Feel free to reach out if you have a
-              question or just want to say hi!
+              Looking for a Senior Frontend Engineer who takes ownership, obsesses over user conversion, and ships clean
+              production code on schedule? Reach out below and let&apos;s make it happen.
             </p>
           </div>
 

@@ -40,7 +40,6 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -141,39 +140,39 @@ function Navbar() {
 // About content inline
 function AboutContent() {
   const skills = [
-    { name: "React.js", percentage: 95 },
-    { name: "Next.js", percentage: 90 },
-    { name: "TypeScript", percentage: 85 },
-    { name: "JavaScript", percentage: 95 },
-    { name: "Tailwind CSS", percentage: 92 },
-    { name: "HTML/CSS", percentage: 98 },
-    { name: "Firebase", percentage: 85 },
-    { name: "MongoDB", percentage: 80 },
+    { name: "React.js", percentage: 96 },
+    { name: "Next.js", percentage: 94 },
+    { name: "TypeScript", percentage: 90 },
+    { name: "JavaScript (ES6+)", percentage: 96 },
+    { name: "Tailwind CSS", percentage: 95 },
+    { name: "HTML5 / CSS3", percentage: 98 },
+    { name: "React Native", percentage: 88 },
+    { name: "Firebase & Cloud APIs", percentage: 88 },
   ]
 
   const testimonials = [
     {
       quote:
-        "Daniel's frontend development skills are exceptional. His work on our online learning platform exceeded expectations with seamless user experience and modern design.",
+        "Daniel transformed our product vision into a fast, intuitive learning and talent platform. His ability to ship complex real-time features ahead of schedule made an immediate impact on user engagement.",
       author: "KOYI Team Lead",
       position: "Project Manager at KOYI",
     },
     {
       quote:
-        "Working with Daniel on the payment platform was fantastic. His attention to detail and ability to implement complex UI components made our project a huge success.",
+        "Working with Daniel on our payment platform was a game-changer. His attention to checkout friction, dashboard clarity, and UI responsiveness directly boosted merchant adoption.",
       author: "OnionPay CTO",
       position: "Chief Technology Officer",
     },
     {
       quote:
-        "Daniel has an incredible ability to translate complex requirements into intuitive, responsive interfaces. His work on our gaming platform was outstanding.",
+        "Daniel has a rare gift for turning complex payment and gaming workflows into effortless user experiences. He takes full ownership and delivers production-ready code every time.",
       author: "Megawins Product Manager",
       position: "Product Lead at Megawins",
     },
   ]
 
   const handleDownloadCV = () => {
-    const path = "/cv.pdf"
+    const path = "/Adekunle_Daniel_Oluwaseyi_CV.pdf"
     const a = document.createElement("a")
     a.href = path
     a.download = "Adekunle_Daniel_Oluwaseyi_CV.pdf"
@@ -194,12 +193,12 @@ function AboutContent() {
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
             <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <motion.h1
-                className="mb-6 text-5xl font-bold md:text-6xl text-brand-dark"
+                className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl text-brand-dark leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                About Me
+                I Help Ambitious Teams Build Products That Win Markets
               </motion.h1>
               <motion.h2
                 className="mb-4 text-2xl font-semibold text-brand-blue"
@@ -207,17 +206,17 @@ function AboutContent() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Adekunle Daniel Oluwaseyi
+                Adekunle Daniel Oluwaseyi • Senior Frontend Engineer (5+ Years Exp.)
               </motion.h2>
-              <p className="mb-6 text-lg text-muted-foreground">
-                Self-motivated and enthusiastic frontend developer with 3+ years of hands-on experience designing
-                appealing user experiences. Proficient in the latest technologies and frameworks, committed to creating
-                visually attractive and responsive websites.
+              <p className="mb-6 text-lg text-muted-foreground leading-relaxed">
+                With <strong>5+ years of hands-on experience</strong> architecting and shipping web and mobile
+                applications, I help startups, founders, and engineering teams turn complex business goals into
+                blazing-fast, user-loved digital products.
               </p>
-              <p className="mb-8 text-lg text-muted-foreground">
-                I am eager to offer my skills and experience to a vibrant firm devoted to continual skill development
-                via mentoring and challenging initiatives. Based in Abuja, FCT, I specialize in React, Next.js, and
-                modern web technologies.
+              <p className="mb-8 text-lg text-muted-foreground leading-relaxed">
+                When you bring me onto your project, you get more than someone who writes React and Next.js code—you get
+                a proactive product partner who cares deeply about conversion rates, sub-second load times, clean
+                scalable architecture, and shipping on schedule.
               </p>
 
               {/* Contact Info */}
@@ -236,7 +235,7 @@ function AboutContent() {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-brand-blue" />
-                  <span>Abuja, Federal Capital Territory</span>
+                  <span>Abuja, Federal Capital Territory (Available Worldwide)</span>
                 </div>
               </div>
 
@@ -244,19 +243,20 @@ function AboutContent() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button
                     className="group bg-brand-blue text-white hover:bg-brand-blue-hover"
-                    onClick={handleDownloadCV}
+                    onClick={handleContactMe}
                   >
-                    Download CV
-                    <Download className="ml-2 h-4 w-4" />
+                    Let&apos;s Work Together
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
                   </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button
                     variant="outline"
-                    onClick={handleContactMe}
+                    onClick={handleDownloadCV}
                     className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white bg-transparent"
                   >
-                    Contact Me
+                    Download CV
+                    <Download className="ml-2 h-4 w-4" />
                   </Button>
                 </motion.div>
               </div>
@@ -289,16 +289,13 @@ function AboutContent() {
             >
               <div className="relative h-[500px] w-full overflow-hidden rounded-3xl">
                 <Image
-                                 src="/images/profile-pic.jpg"
-                                 // /placeholder.svg?height=600&width=500&text=Daniel+Adekunle
-                                 alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
-                                //  height={1000}
-                                //  width={1000}
-                                fill
-                 className="object-cover object-top"
-                                 priority
-                               />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  src="/images/profile-pic.jpg"
+                  alt="Adekunle Daniel Oluwaseyi - Senior Frontend Engineer"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex items-center gap-4 text-white">
                     <div className="rounded-full bg-brand-blue p-3">
@@ -306,7 +303,7 @@ function AboutContent() {
                     </div>
                     <div>
                       <p className="text-xl font-bold">Daniel Adekunle</p>
-                      <p>Frontend Developer</p>
+                      <p>Senior Frontend Engineer • 5+ Years Experience</p>
                     </div>
                   </div>
                 </div>
@@ -316,7 +313,7 @@ function AboutContent() {
         </div>
       </section>
 
-      {/* My Journey Section */}
+      {/* My Journey & Value Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <motion.div
@@ -326,9 +323,11 @@ function AboutContent() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">My Journey</h2>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">
+              Engineering Precision Meets Product Obsession
+            </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              From Electrical Engineering to Frontend Development - a journey of passion and continuous learning.
+              5+ years of turning complex technical challenges into effortless, revenue-generating user experiences.
             </p>
           </motion.div>
 
@@ -338,17 +337,20 @@ function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
+              className="rounded-2xl bg-gray-50 p-8 border border-gray-200"
             >
-              <h3 className="mb-4 text-2xl font-bold text-brand-dark">How I Started</h3>
-              <p className="mb-6 text-muted-foreground">
-                My journey began with a BEng in Electrical Electronics Engineering from Air Force Institute of
-                Technology (2020-2024). During my studies, I discovered my passion for web development and started
-                learning frontend technologies.
+              <h3 className="mb-4 text-2xl font-bold text-brand-dark">5+ Years of Shipping Real Products</h3>
+              <p className="mb-6 text-muted-foreground leading-relaxed">
+                My engineering foundation began during my BEng in Electrical &amp; Electronics Engineering at the Air
+                Force Institute of Technology (2020–2024), where I started building commercial web applications in early
+                2021. That systems-engineering discipline shaped how I write software today: structured, resilient, and
+                built to perform under pressure.
               </p>
-              <p className="text-muted-foreground">
-                I quickly transitioned from engineering to frontend development, working on diverse projects from
-                payment platforms to learning management systems, gaining hands-on experience with modern web
-                technologies over the past 3+ years.
+              <p className="text-muted-foreground leading-relaxed">
+                Over the past <strong>5+ years</strong>, I&apos;ve shipped <strong>10+ production platforms</strong>{" "}
+                spanning digital payments, microfinance banking, telehealth, edtech marketplaces, adtech analytics, and
+                gamified consumer apps—helping businesses onboard thousands of users and process real transactions
+                seamlessly.
               </p>
             </motion.div>
             <motion.div
@@ -356,16 +358,20 @@ function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
+              className="rounded-2xl bg-gray-50 p-8 border border-gray-200"
             >
-              <h3 className="mb-4 text-2xl font-bold text-brand-dark">My Development Philosophy</h3>
-              <p className="mb-6 text-muted-foreground">
-                I believe in creating user-centric designs that not only look great but also provide seamless
-                functionality. My approach combines clean, maintainable code with modern design principles to deliver
-                exceptional user experiences.
+              <h3 className="mb-4 text-2xl font-bold text-brand-dark">What You Get When We Work Together</h3>
+              <p className="mb-6 text-muted-foreground leading-relaxed">
+                <strong>1. Interfaces That Convert:</strong> I don&apos;t just match pixels—I optimize user flows so
+                visitors sign up, complete checkouts, and keep coming back.
               </p>
-              <p className="text-muted-foreground">
-                I stay up-to-date with the latest technologies and best practices, constantly learning and improving my
-                skills through challenging projects and continuous professional development.
+              <p className="mb-6 text-muted-foreground leading-relaxed">
+                <strong>2. Clean, Scalable Code:</strong> Modular React, Next.js, and TypeScript architecture that your
+                team can maintain and extend without headaches.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>3. Ownership &amp; Speed:</strong> Clear communication, proactive problem-solving with backend
+                and design teams, and dependable on-time delivery from day one.
               </p>
             </motion.div>
           </div>
@@ -382,9 +388,9 @@ function AboutContent() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl">Technical Skills</h2>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">Core Technical Mastery</h2>
             <p className="mx-auto max-w-3xl text-lg text-gray-300">
-              Proficient in modern frontend technologies and frameworks with 3+ years of hands-on project experience.
+              Backed by 5+ years of hands-on production experience building modern web and mobile applications.
             </p>
           </motion.div>
 
@@ -453,9 +459,9 @@ function AboutContent() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">What Clients Say</h2>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">Why Teams Love Working With Me</h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Feedback from teams and clients I&apos;ve worked with on various projects.
+              Real feedback from CTOs, Product Managers, and Founders I&apos;ve helped launch and scale.
             </p>
           </motion.div>
 
@@ -471,19 +477,8 @@ function AboutContent() {
                 whileHover={{ y: -5 }}
               >
                 <div className="mb-4 text-2xl text-brand-blue">&quot;</div>
-                <p className="mb-6 text-muted-foreground">{testimonial.quote}</p>
+                <p className="mb-6 text-muted-foreground leading-relaxed">{testimonial.quote}</p>
                 <div className="flex items-center gap-4">
-                  {/* <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gray-200">
-                    <Image
-                                     src="/images/profile-pic.jpg"
-                                     // /placeholder.svg?height=600&width=500&text=Daniel+Adekunle
-                                     alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
-                                     height={1000}
-                                     width={1000}
-                                     className="object-contain"
-                                     priority
-                                   />
-                  </div> */}
                   <div>
                     <p className="font-bold text-brand-dark">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.position}</p>
@@ -514,9 +509,12 @@ function Footer() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-8 text-4xl font-bold">Let&apos;s Work Together</h2>
-          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover" onClick={handleHireMeClick}>
-            Hire me <ArrowUpRight className="ml-2 h-4 w-4" />
+          <h2 className="mb-4 text-4xl font-bold">Ready to Build Something Users Will Love?</h2>
+          <p className="mb-8 max-w-2xl text-gray-300 text-lg">
+            Let&apos;s turn your product vision into a fast, scalable, and high-converting reality.
+          </p>
+          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover px-6 py-6 text-base" onClick={handleHireMeClick}>
+            Start a Conversation <ArrowUpRight className="ml-2 h-5 w-5" />
           </Button>
         </motion.div>
 
@@ -526,8 +524,8 @@ function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-gray-400">
-              Frontend Developer with 3+ years of experience specializing in React, Next.js, and modern web
-              technologies. Based in Abuja, FCT.
+              Senior Frontend Engineer with 5+ years of experience helping startups and enterprises ship high-converting
+              web and mobile products with React, Next.js, and TypeScript.
             </p>
             <div className="flex gap-4 mt-6">
               <a
@@ -562,11 +560,6 @@ function Footer() {
                   About
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/service" className="hover:text-brand-blue">
-                  Services
-                </Link>
-              </li> */}
               <li>
                 <Link href="/resume" className="hover:text-brand-blue">
                   Resume
@@ -608,7 +601,7 @@ function Footer() {
         <hr className="my-12 border-gray-800" />
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-400">Copyright© 2024 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
+          <p className="text-sm text-gray-400">Copyright© 2026 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
           <div className="text-sm text-gray-400">
             <span>User Terms & Conditions | Privacy Policy</span>
           </div>

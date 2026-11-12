@@ -2,14 +2,13 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-// import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Daniel - Frontend Developer Portfolio",
+  title: "Adekunle Daniel | Senior Frontend Engineer (5+ Years Experience)",
   description:
-    "Portfolio website for Daniel, a professional frontend developer specializing in React, Next.js, and modern web technologies",
+    "Helping startups and ambitious brands build blazing-fast, high-converting web and mobile products with React, Next.js, React Native, and TypeScript.",
 }
 
 export default function RootLayout({
@@ -20,9 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange> */}
-          {children}
-        {/* </ThemeProvider> */}
+        {children}
       </body>
     </html>
   )

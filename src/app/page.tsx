@@ -2,7 +2,21 @@
 
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
-import { Menu, X, ArrowUpRight, Download, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import {
+  Menu,
+  X,
+  ArrowUpRight,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  Zap,
+  TrendingUp,
+  ShieldCheck,
+  Layers,
+} from "lucide-react"
 import { cn } from "@/lib/utils"
 import { AnimatePresence } from "framer-motion"
 import Link from "next/link"
@@ -40,7 +54,6 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -150,13 +163,36 @@ function HomeContent() {
     document.body.removeChild(a)
   }
 
-  // const handleContactMe = () => {
-  //   window.location.href = "/contact"
-  // }
-
   const handleHireMe = () => {
     window.location.href = "/contact"
   }
+
+  const valuePillars = [
+    {
+      icon: Zap,
+      title: "Launch Faster Without Tech Debt",
+      description:
+        "I transform complex product specs and Figma designs into clean, production-ready React, Next.js, and React Native code—helping your team hit aggressive launch deadlines with confidence.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Turn Visitors Into Paying Users",
+      description:
+        "Every micro-interaction, checkout flow, and onboarding screen is engineered for speed and clarity—reducing drop-offs and maximizing user conversion and retention.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Fintech-Grade Security & Reliability",
+      description:
+        "With 5+ years building payment gateways, healthcare apps, and real-time dashboards, I build resilient frontends with bulletproof auth, smooth API state management, and zero-lag UX.",
+    },
+    {
+      icon: Layers,
+      title: "Scale Effortlessly as You Grow",
+      description:
+        "I architect modular component libraries and strict TypeScript codebases so your engineering team can ship new features 2x faster as your product and user base expand.",
+    },
+  ]
 
   return (
     <>
@@ -175,11 +211,11 @@ function HomeContent() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-blue opacity-75"></span>
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-blue"></span>
                 </span>
-                Available for new opportunities
+                Available to Ship Your Next Big Product • 5+ Years Experience
               </motion.div>
 
               <motion.h1
-                className="mb-6 text-5xl font-bold md:text-6xl lg:text-7xl text-brand-dark"
+                className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl text-brand-dark leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -187,16 +223,17 @@ function HomeContent() {
                 Hi, I&apos;m{" "}
                 <span className="bg-gradient-to-r from-brand-blue to-blue-600 bg-clip-text text-transparent">
                   Daniel
-                </span>
+                </span>{" "}
+                — I Build Products Users Love.
               </motion.h1>
 
               <motion.h2
-                className="mb-6 text-2xl md:text-3xl font-semibold text-gray-600"
+                className="mb-6 text-xl md:text-2xl font-semibold text-gray-700"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Frontend Developer
+                Senior Frontend Engineer • Helping Startups & Brands Ship Fast, High-Converting Web & Mobile Apps
               </motion.h2>
 
               <motion.p
@@ -205,10 +242,33 @@ function HomeContent() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                Self-motivated and enthusiastic frontend developer with hands-on experience designing appealing user
-                experiences. Proficient in React, Next.js, and modern web technologies, committed to creating visually
-                attractive and responsive websites.
+                Over the past <strong>5+ years</strong>, I&apos;ve helped ambitious companies across fintech,
+                healthcare, edtech, adtech, and gaming turn complex ideas into blazing-fast, revenue-driving digital
+                products. Whether you need to launch a category-defining MVP, revamp a sluggish interface to boost
+                conversions, or scale your engineering team with React, Next.js, and TypeScript—I deliver interfaces
+                that win hearts from the very first click.
               </motion.p>
+
+              {/* Key Impact Metrics */}
+              <motion.div
+                className="grid grid-cols-3 gap-4 mb-8 p-4 rounded-2xl bg-white/80 border border-gray-200 shadow-sm"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45 }}
+              >
+                <div>
+                  <div className="text-2xl md:text-3xl font-bold text-brand-blue">5+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Years Experience</div>
+                </div>
+                <div>
+                  <div className="text-2xl md:text-3xl font-bold text-brand-blue">10+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Live Products Shipped</div>
+                </div>
+                <div>
+                  <div className="text-2xl md:text-3xl font-bold text-brand-blue">100%</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">On-Time Delivery</div>
+                </div>
+              </motion.div>
 
               <motion.div
                 className="flex flex-wrap gap-4 mb-8"
@@ -216,17 +276,17 @@ function HomeContent() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover" onClick={handleHireMe}>
-                  Hire Me
-                  <ArrowUpRight className="ml-2 h-4 w-4" />
+                <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover px-6 py-6 text-base" onClick={handleHireMe}>
+                  Let&apos;s Build Your Product
+                  <ArrowUpRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
                   variant="outline"
                   onClick={handleDownloadCV}
-                  className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white bg-transparent"
+                  className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white bg-transparent px-6 py-6 text-base"
                 >
-                  Download CV
-                  <Download className="ml-2 h-4 w-4" />
+                  Download My CV
+                  <Download className="ml-2 h-5 w-5" />
                 </Button>
               </motion.div>
 
@@ -251,7 +311,7 @@ function HomeContent() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4 text-brand-blue" />
-                  <span>Abuja, FCT</span>
+                  <span>Abuja, FCT (Open to Remote Worldwide)</span>
                 </div>
               </motion.div>
 
@@ -290,45 +350,89 @@ function HomeContent() {
               <div className="relative h-[600px] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-brand-blue/20 to-blue-600/20">
                 <Image
                   src="/images/profile-pic.jpg"
-                  // /placeholder.svg?height=600&width=500&text=Daniel+Adekunle
-                  alt="Adekunle Daniel Oluwaseyi - Frontend Developer"
-                  // height={1000}
-                  // width={1000}
-                 fill
-                 className="object-cover object-top"
+                  alt="Adekunle Daniel Oluwaseyi - Senior Frontend Engineer"
+                  fill
+                  className="object-cover object-top"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 
                 {/* Floating Elements */}
                 <motion.div
-                  className="absolute top-6 right-6 rounded-lg bg-white/90 backdrop-blur-sm p-3 shadow-lg"
+                  className="absolute top-6 right-6 rounded-lg bg-white/95 backdrop-blur-sm p-3 shadow-lg"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
                 >
-                  <div className="text-sm font-semibold text-brand-dark">React.js</div>
-                  <div className="text-xs text-gray-600">Expert Level</div>
+                  <div className="text-sm font-semibold text-brand-dark">5+ Years Experience</div>
+                  <div className="text-xs text-brand-blue font-medium">Production-Proven Impact</div>
                 </motion.div>
 
                 <motion.div
-                  className="absolute bottom-20 left-6 rounded-lg bg-white/90 backdrop-blur-sm p-3 shadow-lg"
+                  className="absolute bottom-20 left-6 rounded-lg bg-white/95 backdrop-blur-sm p-3 shadow-lg"
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
                 >
-                  <div className="text-sm font-semibold text-brand-dark">Next.js</div>
-                  <div className="text-xs text-gray-600">Advanced</div>
+                  <div className="text-sm font-semibold text-brand-dark">React & Next.js</div>
+                  <div className="text-xs text-gray-600">High-Converting Interfaces</div>
                 </motion.div>
 
                 <motion.div
-                  className="absolute top-1/2 left-6 rounded-lg bg-white/90 backdrop-blur-sm p-3 shadow-lg"
+                  className="absolute top-1/2 left-6 rounded-lg bg-white/95 backdrop-blur-sm p-3 shadow-lg"
                   animate={{ x: [0, 10, 0] }}
                   transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 2 }}
                 >
-                  <div className="text-sm font-semibold text-brand-dark">TypeScript</div>
-                  <div className="text-xs text-gray-600">Proficient</div>
+                  <div className="text-sm font-semibold text-brand-dark">TypeScript & Mobile</div>
+                  <div className="text-xs text-gray-600">Scalable Architecture</div>
                 </motion.div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* What I Can Help You Achieve Section */}
+      <section className="py-16 md:py-24 bg-brand-dark text-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mb-14 text-center"
+          >
+            <span className="inline-block mb-3 rounded-full bg-brand-blue/20 px-4 py-1.5 text-sm font-semibold text-brand-blue">
+              WHY TEAMS HIRE ME
+            </span>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+              What I Can Help You Achieve
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg text-gray-300">
+              You don&apos;t just need another developer writing code—you need an engineering partner obsessed with your
+              product&apos;s speed, user retention, and business growth.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {valuePillars.map((pillar, index) => {
+              const IconComponent = pillar.icon
+              return (
+                <motion.div
+                  key={pillar.title}
+                  className="rounded-2xl bg-gray-800/80 border border-gray-700 p-8 hover:border-brand-blue transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue text-white">
+                    <IconComponent className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-3 text-2xl font-bold text-white">{pillar.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{pillar.description}</p>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -343,42 +447,45 @@ function HomeContent() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">Technical Skills</h2>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">
+              The Toolkit Behind Your Next Product
+            </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Proficient in modern web technologies and frameworks
+              5+ years of battle-tested mastery across modern frontend frameworks, state management, and cross-platform
+              technologies
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
               { name: "React", level: "Expert" },
-              { name: "Next.js", level: "Advanced" },
-              { name: "TypeScript", level: "Proficient" },
-              { name: "JavaScript", level: "Expert" },
+              { name: "Next.js", level: "Expert" },
+              { name: "TypeScript", level: "Advanced" },
+              { name: "JavaScript (ES6+)", level: "Expert" },
+              { name: "React Native", level: "Advanced" },
               { name: "Tailwind CSS", level: "Expert" },
-              { name: "Chakra UI", level: "Proficient" },
-              { name: "Framer Motion", level: "Proficient" },
-              { name: "HTML/CSS", level: "Expert" },
-              { name: "Firebase", level: "Proficient" },
-              { name: "MongoDB", level: "Intermediate" },
-              { name: "Python", level: "Intermediate" },
               { name: "Shadcn UI", level: "Expert" },
-              { name: "Redux Toolkit", level: "Proficient" },
-              { name: "Zustand", level: "Proficient" },
-              { name: "Git", level: "Proficient" },
-              { name: "API Integration", level: "Advanced" },
+              { name: "Framer Motion", level: "Advanced" },
+              { name: "Redux Toolkit", level: "Advanced" },
+              { name: "Zustand", level: "Advanced" },
+              { name: "Chakra UI", level: "Proficient" },
+              { name: "HTML5 / CSS3", level: "Expert" },
+              { name: "Firebase", level: "Advanced" },
+              { name: "REST & GraphQL APIs", level: "Expert" },
+              { name: "MongoDB", level: "Proficient" },
+              { name: "Git & CI/CD", level: "Advanced" },
             ].map((skill, index) => (
               <motion.div
                 key={skill.name}
                 className="rounded-xl bg-gray-50 p-4 text-center hover:bg-brand-blue/5 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
                 <div className="font-semibold text-brand-dark mb-1">{skill.name}</div>
-                <div className="text-xs text-brand-blue">{skill.level}</div>
+                <div className="text-xs text-brand-blue font-medium">{skill.level}</div>
               </motion.div>
             ))}
           </div>
@@ -395,55 +502,55 @@ function HomeContent() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">Recent Projects</h2>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brand-dark">Proven Results in Production</h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Some of the projects I&apos;ve worked on recently
+              Real products engineered to solve business bottlenecks, delight users, and scale across markets
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "KOYI Learning Platform",
+                title: "KOYI Learning & Talent Platform",
                 description:
-                  "Comprehensive online learning platform with course management, messaging system, and professional profiles.",
-                tech: ["React", "Next.js", "TypeScript"],
-                status: "Completed",
+                  "Empowered thousands of learners and professionals to connect, book courses, and collaborate via real-time messaging with a fast, conversion-focused Next.js experience.",
+                tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+                status: "Live in Production",
               },
               {
                 title: "LukeHealth Medical App",
                 description:
-                  "Medical app for patient profiles, appointment booking, and health tracking with doctor monitoring features.",
+                  "Bridged the gap between patients and doctors with instant appointment booking, dosage tracking, and real-time clinician monitoring on mobile.",
                 tech: ["React Native", "Firebase", "API Integration"],
-                status: "In Development",
+                status: "Current Project",
               },
               {
                 title: "Megawins Gaming Platform",
                 description:
-                  "Secure gaming and transaction platform with payment processing and multi-factor authentication.",
+                  "Engineered a high-concurrency gaming and instant-payout platform with multi-factor security that boosted player trust and transaction completion.",
                 tech: ["React", "Tailwind CSS", "Payment APIs"],
-                status: "Completed",
+                status: "Live in Production",
               },
               {
-                title: "OnionPay Digital Platform",
+                title: "OnionPay Digital Payment Suite",
                 description:
-                  "User-friendly digital payment platform with payment links, receipt generation, and transaction management.",
-                tech: ["React", "JavaScript", "API Integration"],
-                status: "Completed",
+                  "Simplified merchant collections with one-click payment links, automated receipts, and real-time revenue analytics dashboards.",
+                tech: ["React", "JavaScript", "Payment APIs"],
+                status: "Live in Production",
               },
               {
-                title: "MarcheSolution School Management",
+                title: "AET Ads – AdTech Analytics",
                 description:
-                  "Large-scale school management platform with student progress tracking, ID generation, and online exams.",
-                tech: ["React", "Swagger API", "Component Library"],
-                status: "Completed",
+                  "Built an intuitive self-serve advertising and live campaign analytics platform that helps brands track ROI and scale ad spend effortlessly.",
+                tech: ["React", "Next.js", "Analytics", "AdTech"],
+                status: "Live in Production",
               },
               {
                 title: "OneWallet MFB Platform",
                 description:
-                  "Secure digital payment platform for African markets with rewards system and identity verification.",
+                  "Delivered a secure, community-driven digital banking and rewards platform optimized for fast performance across African markets.",
                 tech: ["React", "Security Features", "Multi-factor Auth"],
-                status: "Completed",
+                status: "Live in Production",
               },
             ].map((project, index) => (
               <motion.div
@@ -457,19 +564,17 @@ function HomeContent() {
               >
                 <div className="mb-3">
                   <span
-                    className={`inline-block px-2 py-1 text-xs rounded-full ${
+                    className={`inline-block px-2 py-1 text-xs font-medium rounded-full ${
                       project.status === "Current Project"
                         ? "bg-green-100 text-green-800"
-                        : project.status === "In Development"
-                          ? "bg-blue-100 text-blue-800"
-                          : "bg-gray-100 text-gray-800"
+                        : "bg-blue-100 text-blue-800"
                     }`}
                   >
                     {project.status}
                   </span>
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-brand-dark">{project.title}</h3>
-                <p className="mb-4 text-muted-foreground text-sm">{project.description}</p>
+                <p className="mb-4 text-muted-foreground text-sm leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span key={tech} className="px-2 py-1 text-xs bg-brand-blue/10 text-brand-blue rounded">
@@ -485,14 +590,13 @@ function HomeContent() {
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
             <Link href="/project">
-              <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover">
-                {/* View All Projects */}
-                View Some Live Projects
-                <ArrowUpRight className="ml-2 h-4 w-4" />
+              <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover px-6 py-6 text-base">
+                Explore All Live Projects & Case Studies
+                <ArrowUpRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </motion.div>
@@ -518,9 +622,12 @@ function Footer() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-8 text-4xl font-bold">Let&apos;s Work Together</h2>
-          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover" onClick={handleHireMeClick}>
-            Hire me <ArrowUpRight className="ml-2 h-4 w-4" />
+          <h2 className="mb-4 text-4xl font-bold">Ready to Build Something Users Will Love?</h2>
+          <p className="mb-8 max-w-2xl text-gray-300 text-lg">
+            Let&apos;s turn your product vision into a fast, scalable, and high-converting reality.
+          </p>
+          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover px-6 py-6 text-base" onClick={handleHireMeClick}>
+            Start a Conversation <ArrowUpRight className="ml-2 h-5 w-5" />
           </Button>
         </motion.div>
 
@@ -530,7 +637,8 @@ function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-gray-400">
-              Frontend Developer specializing in React, Next.js, and modern web technologies. Based in Abuja, FCT.
+              Senior Frontend Engineer with 5+ years of experience helping startups and enterprises ship high-converting
+              web and mobile products with React, Next.js, and TypeScript.
             </p>
             <div className="flex gap-4 mt-6">
               <a
@@ -565,11 +673,6 @@ function Footer() {
                   About
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/service" className="hover:text-brand-blue">
-                  Services
-                </Link>
-              </li> */}
               <li>
                 <Link href="/resume" className="hover:text-brand-blue">
                   Resume
@@ -611,7 +714,7 @@ function Footer() {
         <hr className="my-12 border-gray-800" />
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-400">Copyright© 2024 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
+          <p className="text-sm text-gray-400">Copyright© 2026 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
           <div className="text-sm text-gray-400">
             <span>User Terms & Conditions | Privacy Policy</span>
           </div>

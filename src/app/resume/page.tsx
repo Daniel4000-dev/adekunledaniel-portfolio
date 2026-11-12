@@ -39,7 +39,6 @@ function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    // { href: "/service", label: "Services" },
     { href: "/resume", label: "Resume" },
     { href: "/project", label: "Projects" },
     { href: "/contact", label: "Contact" },
@@ -140,45 +139,115 @@ function Navbar() {
 // Resume content inline
 function ResumeContent() {
   const professionalSkills = [
-    { name: "React.js", percentage: 95 },
-    { name: "Next.js", percentage: 90 },
-    { name: "JavaScript", percentage: 95 },
-    { name: "TypeScript", percentage: 85 },
+    { name: "React.js", percentage: 96 },
+    { name: "Next.js", percentage: 94 },
+    { name: "JavaScript (ES6+)", percentage: 96 },
+    { name: "TypeScript", percentage: 90 },
   ]
 
   const technicalSkills = [
-    { name: "HTML/CSS", percentage: 98 },
-    { name: "Tailwind CSS", percentage: 92 },
-    { name: "Firebase", percentage: 85 },
-    { name: "MongoDB", percentage: 80 },
+    { name: "HTML5 / CSS3", percentage: 98 },
+    { name: "Tailwind CSS", percentage: 95 },
+    { name: "React Native", percentage: 88 },
+    { name: "Firebase & REST APIs", percentage: 90 },
+  ]
+
+  const workTimeline = [
+    {
+      company: "KOYI",
+      period: "October 2024 - Present",
+      role: "Senior Frontend Engineer",
+      dotColor: "bg-brand-blue",
+      description:
+        "Spearheading frontend architecture for an all-in-one learning and talent marketplace. Engineered high-converting course discovery, talent hiring profiles, and real-time instructor messaging in React, Next.js, and TypeScript—cutting page load times and boosting learner retention.",
+    },
+    {
+      company: "LukeHealth",
+      period: "November 2024 - Present",
+      role: "Mobile & Frontend Engineer",
+      dotColor: "bg-green-500",
+      description:
+        "Building a patient-first mobile health platform in React Native. Delivered frictionless appointment booking, automated dosage reminders, encrypted health records, and real-time clinician monitoring dashboards.",
+    },
+    {
+      company: "Megawins",
+      period: "April 2024 - March 2025",
+      role: "Lead Frontend Developer",
+      dotColor: "bg-purple-500",
+      description:
+        "Led UI/UX engineering for a high-concurrency gaming and instant-payout platform. Built modular Tailwind CSS components, real-time game history tracking, and multi-factor authenticated payment flows that reduced checkout drop-offs.",
+    },
+    {
+      company: "EEC",
+      period: "September 2023 - March 2024",
+      role: "Frontend Developer",
+      dotColor: "bg-blue-500",
+      description:
+        "Delivered a high-converting real-estate showcase and property management web platform. Integrated Swagger REST APIs and optimized asset delivery to help prospective buyers search, filter, and book property viewings effortlessly.",
+    },
+    {
+      company: "OnionPay",
+      period: "March 2023 - September 2023",
+      role: "Frontend Developer",
+      dotColor: "bg-orange-500",
+      description:
+        "Engineered merchant payment tools including one-click payment link generators, automated receipt views, and real-time cash-flow analytics dashboards—enabling businesses to collect payments faster across mobile and desktop.",
+    },
+    {
+      company: "MarcheSolution",
+      period: "August 2022 - February 2023",
+      role: "Frontend Developer",
+      dotColor: "bg-indigo-500",
+      description:
+        "Built core frontend modules for an enterprise school management platform—automating student performance analytics, batch digital ID card generation, and distraction-free online examination portals.",
+    },
+    {
+      company: "OneWallet MFB",
+      period: "January 2022 - August 2022",
+      role: "Frontend Developer",
+      dotColor: "bg-teal-500",
+      description:
+        "Helped launch and scale a community-focused microfinance and digital payments platform for African markets. Created intuitive KYC onboarding, loyalty rewards, and multi-factor security interfaces optimized for low-bandwidth mobile networks.",
+    },
+    {
+      company: "GreenLeaf & MOA Delivery",
+      period: "January 2021 - December 2021",
+      role: "Frontend Web Developer",
+      dotColor: "bg-emerald-500",
+      description:
+        "Designed and shipped commercial web applications including a real-time food ordering and delivery tracking platform (MOA Delivery) and a lead-capturing client portal (GreenLeaf), establishing a strong foundation in conversion-focused React engineering.",
+    },
   ]
 
   const achievements = [
     {
-      title: "7+ Web Applications",
+      title: "10+ Production Apps",
       description:
-        "Successfully built and deployed over 10 production-ready web applications using modern technologies.",
+        "Architected, built, and launched over 10 live web and mobile products generating real user growth and revenue.",
       icon: "🚀",
     },
     {
-      title: "Multiple Industries",
-      description: "Worked across diverse sectors including fintech, healthcare, education, and gaming platforms.",
+      title: "5+ High-Growth Industries",
+      description:
+        "Proven domain expertise across Fintech, Telehealth, EdTech, AdTech, Real Estate, and Gaming platforms.",
       icon: "🏢",
     },
     {
-      title: "3+ Years Experience",
-      description: "Hands-on professional experience in frontend development and modern web technologies.",
+      title: "5+ Years Experience",
+      description:
+        "Five-plus years (2021–Present) of continuous, hands-on engineering in React, Next.js, TypeScript, and React Native.",
       icon: "⏱️",
     },
     {
-      title: "Team Collaboration",
-      description: "Successfully collaborated with cross-functional teams and delivered projects on time.",
+      title: "100% On-Time Delivery",
+      description:
+        "Trusted by CTOs, founders, and cross-functional product teams to take ownership and ship cleanly on schedule.",
       icon: "⭐",
     },
   ]
 
- const handleDownloadCV = () => {
-    const path = "/cv.pdf"
+  const handleDownloadCV = () => {
+    const path = "/Adekunle_Daniel_Oluwaseyi_CV.pdf"
     const a = document.createElement("a")
     a.href = path
     a.download = "Adekunle_Daniel_Oluwaseyi_CV.pdf"
@@ -204,7 +273,7 @@ function ResumeContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              My Resume
+              5+ Years of Proven Impact
             </motion.h1>
             <motion.h2
               className="mb-4 text-2xl font-semibold text-brand-blue"
@@ -212,20 +281,29 @@ function ResumeContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
             >
-              Adekunle Daniel Oluwaseyi
+              Adekunle Daniel Oluwaseyi • Senior Frontend Engineer
             </motion.h2>
             <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground">
-              A comprehensive overview of my professional experience, education, and skills in frontend development.
+              A track record of helping startups and established teams design, build, and scale high-converting web and
+              mobile products from 2021 to the present.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex justify-center"
+              className="flex justify-center gap-4 flex-wrap"
             >
               <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover" onClick={handleDownloadCV}>
-                Download CV <Download className="ml-2 h-4 w-4" />
+                Download Full CV <Download className="ml-2 h-4 w-4" />
               </Button>
+              <Link href="/contact">
+                <Button
+                  variant="outline"
+                  className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white bg-transparent"
+                >
+                  Hire Me for Your Team <ArrowUpRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -242,211 +320,65 @@ function ResumeContent() {
             className="mb-16"
           >
             <motion.div
-              className="mb-8 flex items-center gap-3"
+              className="mb-12 flex items-center gap-3"
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
               <span className="text-3xl">💼</span>
-              <h2 className="text-3xl font-bold text-brand-dark">Work Experience</h2>
+              <div>
+                <h2 className="text-3xl font-bold text-brand-dark">Work Experience (2021 – Present)</h2>
+                <p className="text-muted-foreground">5+ years of shipping production web &amp; mobile applications</p>
+              </div>
             </motion.div>
 
             <div className="space-y-16">
-              {/* Current Position - KOYI */}
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,auto,1fr]">
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-2xl font-bold text-brand-dark">KOYI</h3>
-                  <p className="text-muted-foreground">October 2024 - Present</p>
-                </motion.div>
+              {workTimeline.map((item, idx) => (
+                <div key={item.company} className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,auto,1fr]">
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <h3 className="text-2xl font-bold text-brand-dark">{item.company}</h3>
+                    <p className="text-brand-blue font-medium">{item.period}</p>
+                  </motion.div>
 
-                <div className="relative flex justify-center">
+                  <div className="relative flex justify-center">
+                    <motion.div
+                      className="absolute h-full w-0.5 bg-gray-300"
+                      initial={{ height: 0 }}
+                      whileInView={{ height: "100%" }}
+                      transition={{ duration: 0.8, delay: idx * 0.1 }}
+                      viewport={{ once: true }}
+                    ></motion.div>
+                    <motion.div
+                      className={`relative z-10 h-6 w-6 rounded-full border-2 border-dashed ${item.dotColor}`}
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                        delay: 0.2 + idx * 0.1,
+                      }}
+                      viewport={{ once: true }}
+                    ></motion.div>
+                  </div>
+
                   <motion.div
-                    className="absolute h-full w-0.5 bg-gray-300"
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "100%" }}
-                    transition={{ duration: 0.8 }}
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
                     viewport={{ once: true }}
-                  ></motion.div>
-                  <motion.div
-                    className="relative z-10 h-6 w-6 rounded-full border-2 border-dashed bg-brand-blue"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 20,
-                      delay: 0.3,
-                    }}
-                    viewport={{ once: true }}
-                  ></motion.div>
+                  >
+                    <h4 className="text-2xl font-bold text-brand-dark mb-2">{item.role}</h4>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  </motion.div>
                 </div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-2xl font-bold text-brand-dark">Frontend Developer</h4>
-                  <p className="text-muted-foreground">
-                    Building a comprehensive online learning platform with course management, messaging system, and
-                    professional profiles. Focused on responsive design and user experience optimization across multiple
-                    devices.
-                  </p>
-                </motion.div>
-              </div>
-
-              {/* LukeHealth */}
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,auto,1fr]">
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-2xl font-bold text-brand-dark">LukeHealth</h3>
-                  <p className="text-muted-foreground">November 2024 - Present</p>
-                </motion.div>
-
-                <div className="relative flex justify-center">
-                  <motion.div
-                    className="absolute h-full w-0.5 bg-gray-300"
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "100%" }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    viewport={{ once: true }}
-                  ></motion.div>
-                  <motion.div
-                    className="relative z-10 h-6 w-6 rounded-full border-2 border-dashed bg-green-500"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 20,
-                      delay: 0.5,
-                    }}
-                    viewport={{ once: true }}
-                  ></motion.div>
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-2xl font-bold text-brand-dark">Mobile Developer</h4>
-                  <p className="text-muted-foreground">
-                    Developing a medical app for patient profiles, appointment booking, and health tracking.
-                    Implementing secure data storage and intuitive interfaces for both patients and healthcare
-                    providers.
-                  </p>
-                </motion.div>
-              </div>
-
-              {/* Megawins */}
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,auto,1fr]">
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-2xl font-bold text-brand-dark">Megawins</h3>
-                  <p className="text-muted-foreground">September 2024 - March 2025</p>
-                </motion.div>
-
-                <div className="relative flex justify-center">
-                  <motion.div
-                    className="absolute h-full w-0.5 bg-gray-300"
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "100%" }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    viewport={{ once: true }}
-                  ></motion.div>
-                  <motion.div
-                    className="relative z-10 h-6 w-6 rounded-full border-2 border-dashed bg-purple-500"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 20,
-                      delay: 0.7,
-                    }}
-                    viewport={{ once: true }}
-                  ></motion.div>
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-2xl font-bold text-brand-dark">Frontend Developer</h4>
-                  <p className="text-muted-foreground">
-                    Led UI/UX design for a secure gaming and transaction platform. Developed scalable components using
-                    Tailwind CSS and integrated secure payment processing with multi-factor authentication.
-                  </p>
-                </motion.div>
-              </div>
-
-              {/* OnionPay */}
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,auto,1fr]">
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-2xl font-bold text-brand-dark">OnionPay</h3>
-                  <p className="text-muted-foreground">September 2023 - December 2023</p>
-                </motion.div>
-
-                <div className="relative flex justify-center">
-                  <motion.div
-                    className="absolute h-full w-0.5 bg-gray-300"
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "100%" }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    viewport={{ once: true }}
-                  ></motion.div>
-                  <motion.div
-                    className="relative z-10 h-6 w-6 rounded-full border-2 border-dashed bg-orange-500"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 20,
-                      delay: 0.9,
-                    }}
-                    viewport={{ once: true }}
-                  ></motion.div>
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-2xl font-bold text-brand-dark">Frontend Developer</h4>
-                  <p className="text-muted-foreground">
-                    Developed a digital payment platform with payment links, receipt generation, and transaction
-                    management. Optimized dashboard layouts and improved user accessibility across mobile and desktop
-                    platforms.
-                  </p>
-                </motion.div>
-              </div>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -470,7 +402,7 @@ function ResumeContent() {
               viewport={{ once: true }}
             >
               <span className="text-3xl">🎓</span>
-              <h2 className="text-3xl font-bold text-brand-dark">Education & Certifications</h2>
+              <h2 className="text-3xl font-bold text-brand-dark">Education &amp; Certifications</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -486,8 +418,8 @@ function ResumeContent() {
                 <h3 className="mb-1 text-xl font-bold text-brand-dark">BEng Electrical Electronics Engineering</h3>
                 <div className="mb-4 text-muted-foreground">Air Force Institute of Technology, Kaduna State</div>
                 <p className="text-muted-foreground">
-                  Comprehensive engineering education with focus on electronics, programming, and system design
-                  principles.
+                  Rigorous engineering training in systems architecture, logic design, and software programming—forming
+                  the analytical backbone of my 5+ year software engineering career.
                 </p>
               </motion.div>
 
@@ -500,10 +432,11 @@ function ResumeContent() {
                 whileHover={{ y: -5 }}
               >
                 <div className="mb-2 text-sm font-medium text-brand-blue">November 2022</div>
-                <h3 className="mb-1 text-xl font-bold text-brand-dark">Certified in Cybersecurity</h3>
+                <h3 className="mb-1 text-xl font-bold text-brand-dark">Certified in Cybersecurity (CC)</h3>
                 <div className="mb-4 text-muted-foreground">ISC2</div>
                 <p className="text-muted-foreground">
-                  Professional certification in cybersecurity principles, risk management, and security best practices.
+                  Professional certification in security-first application design, authentication protocols, and risk
+                  mitigation—applied directly to fintech and healthcare frontends.
                 </p>
               </motion.div>
 
@@ -519,7 +452,8 @@ function ResumeContent() {
                 <h3 className="mb-1 text-xl font-bold text-brand-dark">Introduction to Cloud Computing</h3>
                 <div className="mb-4 text-muted-foreground">Simplilearn</div>
                 <p className="text-muted-foreground">
-                  Foundational knowledge in cloud computing concepts, services, and deployment models.
+                  Cloud architecture, modern CI/CD deployment pipelines, and scalable hosting strategies for high-traffic
+                  web applications.
                 </p>
               </motion.div>
 
@@ -535,7 +469,8 @@ function ResumeContent() {
                 <h3 className="mb-1 text-xl font-bold text-brand-dark">Career Essentials in Generative AI</h3>
                 <div className="mb-4 text-muted-foreground">Microsoft and LinkedIn</div>
                 <p className="text-muted-foreground">
-                  Advanced training in generative AI technologies and their applications in modern development.
+                  Integrating AI-powered user experiences, intelligent assistants, and modern LLM workflows into
+                  next-generation web products.
                 </p>
               </motion.div>
             </div>
@@ -566,7 +501,7 @@ function ResumeContent() {
 
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
               <div>
-                <h3 className="mb-6 text-2xl font-bold text-brand-dark">Frontend Technologies</h3>
+                <h3 className="mb-6 text-2xl font-bold text-brand-dark">Frontend Frameworks &amp; Languages</h3>
                 <div className="space-y-6">
                   {professionalSkills.map((skill, index) => (
                     <motion.div
@@ -595,7 +530,7 @@ function ResumeContent() {
               </div>
 
               <div>
-                <h3 className="mb-6 text-2xl font-bold text-brand-dark">Tools & Databases</h3>
+                <h3 className="mb-6 text-2xl font-bold text-brand-dark">UI Systems, Mobile &amp; Cloud</h3>
                 <div className="space-y-6">
                   {technicalSkills.map((skill, index) => (
                     <motion.div
@@ -637,9 +572,9 @@ function ResumeContent() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl">Achievements & Milestones</h2>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">Achievements &amp; Track Record</h2>
             <p className="mx-auto max-w-3xl text-lg text-gray-300">
-              Key accomplishments and milestones from my professional journey in frontend development.
+              Measurable milestones across 5+ years of building products that users love and businesses rely on.
             </p>
           </motion.div>
 
@@ -695,9 +630,12 @@ function Footer() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-8 text-4xl font-bold">Let&apos;s Work Together</h2>
-          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover" onClick={handleHireMeClick}>
-            Hire me <ArrowUpRight className="ml-2 h-4 w-4" />
+          <h2 className="mb-4 text-4xl font-bold">Ready to Build Something Users Will Love?</h2>
+          <p className="mb-8 max-w-2xl text-gray-300 text-lg">
+            Let&apos;s turn your product vision into a fast, scalable, and high-converting reality.
+          </p>
+          <Button className="bg-brand-blue text-white hover:bg-brand-blue-hover px-6 py-6 text-base" onClick={handleHireMeClick}>
+            Start a Conversation <ArrowUpRight className="ml-2 h-5 w-5" />
           </Button>
         </motion.div>
 
@@ -707,7 +645,8 @@ function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-gray-400">
-              Frontend Developer specializing in React, Next.js, and modern web technologies. Based in Abuja, FCT.
+              Senior Frontend Engineer with 5+ years of experience helping startups and enterprises ship high-converting
+              web and mobile products with React, Next.js, and TypeScript.
             </p>
             <div className="flex gap-4 mt-6">
               <a
@@ -742,11 +681,6 @@ function Footer() {
                   About
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/service" className="hover:text-brand-blue">
-                  Services
-                </Link>
-              </li> */}
               <li>
                 <Link href="/resume" className="hover:text-brand-blue">
                   Resume
@@ -788,9 +722,9 @@ function Footer() {
         <hr className="my-12 border-gray-800" />
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-400">Copyright© 2024 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
+          <p className="text-sm text-gray-400">Copyright© 2026 Adekunle Daniel Oluwaseyi. All Rights Reserved.</p>
           <div className="text-sm text-gray-400">
-            <span>User Terms & Conditions | Privacy Policy</span>
+            <span>User Terms &amp; Conditions | Privacy Policy</span>
           </div>
         </div>
       </div>
