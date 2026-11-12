@@ -11,8 +11,8 @@ export const personalInfo = {
   summary:
     "Self-motivated and enthusiastic frontend developer with hands-on experience designing appealing user experiences. Proficient in the latest technologies and frameworks, committed to creating visually attractive and responsive websites.",
   heroTagline: "I create beautiful, responsive web applications that deliver exceptional user experiences.",
-  avatar: "/images/profile.png",
-  profileImage: "/images/profile.png",
+  avatar: "/images/profile-pic.jpg",
+  profileImage: "/images/profile-pic.jpg",
   resumeUrl: "/resume.pdf",
   cta: {
     primary: "View My Work",
